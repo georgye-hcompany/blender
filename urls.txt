@@ -1,1 +1,14 @@
 /
+/?window1=asset_browser&window2=viewport_3d&window3=viewport_3d&window4=properties&window5=image_editor&window6=compositor
+/?window1=viewport_3d&window2=viewport_3d&window3=viewport_3d&window4=viewport_3d&window5=viewport_3d&window6=viewport_3d
+/?window2=viewport_3d,collapsed-left-toolbar
+/?window2=viewport_3d,expanded-left-toolbar
+/?open=node-panel-collapsed
+/?open=properties-panel-collapsed
+/?open=custom-properties-panel-expanded
+/?open=window1-editor-selector
+/?open=glare-node-collapsed
+/?open=compositor-tool-dropdown
+/?open=compositor-annotate-dropdown
+/?open=compositor-filter-type-dropdown
+/?open=compositor-color-picker
