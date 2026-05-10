@@ -127,13 +127,14 @@
   }
 </script>
 
-<div class="relative flex" use:closeOnClickOutside>
+<div class="relative flex" >
   <div bind:this={triggerElement} class="px-2 py-1 bg-[#282828] border border-[#3c3c3c] rounded hover:bg-[#333] cursor-pointer flex items-center justify-center gap-1.5 text-[#ccc] min-w-[30px] min-h-[24px]" on:click={toggleDropdown} alt-id="Editor type selector: {currentName}">
     <i class="fa-light {currentIcon} text-[14px] pointer-events-none"></i>
     <i class="fa-solid fa-chevron-down text-[9px] text-[#a0a0a0] pointer-events-none"></i>
   </div>
   
   {#if isOpen}
+    <div class="fixed inset-0 z-40 bg-transparent" on:click|stopPropagation={toggleDropdown}></div>
     <div class="fixed bg-[#1a1a1a] border border-[#2a2a2a] rounded shadow-[0_4px_12px_rgba(0,0,0,0.8)] z-50 py-2 text-[13px] flex overflow-x-auto" style="left: {dropdownX}px; top: {dropdownY}px;" alt-id="Editor types dropdown menu">
       {#each Object.entries(editors) as [category, items], colIndex}
         <div class="flex flex-col min-w-[230px] {colIndex !== Object.keys(editors).length - 1 ? 'border-r border-[#333]' : ''}">

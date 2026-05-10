@@ -57,19 +57,18 @@
       </div>
       
       <div class="flex items-center gap-2 text-[#999] text-[14px] cursor-pointer" alt-id="Window title and current file path dropdown">
-        <div class="w-[22px] h-[22px] bg-white rounded-full flex items-center justify-center border border-[#ccc] pointer-events-none">
-           <div class="w-3 h-3 bg-[#ea7600] rounded-full translate-x-[1px] translate-y-[-1px] pointer-events-none"></div>
-           <div class="w-2 h-2 bg-[#1f5f99] rounded-full absolute translate-x-[-2px] translate-y-[2px] pointer-events-none"></div>
+        <div class="relative w-[14px] h-[18px] flex items-center justify-center">
+          <i class="fa-solid fa-file text-[#666] text-[16px] pointer-events-none absolute"></i>
+          <i class="fa-solid fa-eye text-[#1a1a1a] text-[8px] pointer-events-none absolute z-10"></i>
         </div>
-        <i class="fa-solid fa-chevron-down text-[10px] text-[#666] ml-1 pointer-events-none"></i>
-        <span class="ml-1 text-[#ccc] pointer-events-none">cube_01/mats.blend — Blender 4.1.1</span>
+        <span class="ml-1 text-[#ccc] font-bold pointer-events-none">* cube_diorama.blend - Blender 5.1.1</span>
       </div>
     </div>
   </div>
 
   <TitleBar />
   
-  <div class="flex-1 grid grid-cols-[880px_1fr_800px] grid-rows-[1fr_650px] overflow-hidden bg-[#151515] gap-[1px]" alt-id="Main workspace area">
+  <div class="flex-1 grid grid-cols-[880px_1fr_800px] grid-rows-[1fr_880px] overflow-hidden bg-[#151515] gap-[1px]" alt-id="Main workspace area">
     <!-- Top Left -->
     <div class="col-start-1 row-start-1 overflow-hidden flex flex-col">
       <EditorContainer initialEditor={window1} windowId="window1" />

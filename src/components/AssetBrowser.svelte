@@ -1,7 +1,97 @@
 <script>
+  import { onMount } from 'svelte';
   import EditorSelector from './EditorSelector.svelte';
   export let currentEditor = 'asset_browser';
   export let windowId = '';
+
+  let isBrushLayout = false;
+  let activeBrushTooltip = '';
+
+  onMount(() => {
+    if (typeof window !== 'undefined') {
+      const urlParams = new URLSearchParams(window.location.search);
+      const val = urlParams.get(windowId) || '';
+      if (val.includes('brush-layout') || windowId === 'window6') {
+        isBrushLayout = true;
+      }
+      
+      const openParam = urlParams.get('open') || '';
+      const openStates = openParam ? openParam.split(',').filter(Boolean) : [];
+      const tooltipPrefix = `${windowId}-brush-tool-`;
+      for (const state of openStates) {
+        if (state.startsWith(tooltipPrefix) && state.endsWith('-tooltip')) {
+          const toolSlug = state.substring(tooltipPrefix.length, state.length - '-tooltip'.length);
+          activeBrushTooltip = toolSlug;
+          break;
+        }
+      }
+    }
+  });
+
+  function handleBrushToolClick(toolName) {
+    const slug = toolName.toLowerCase().replace(/[\/ ]/g, '-');
+    if (activeBrushTooltip === slug) {
+      activeBrushTooltip = '';
+    } else {
+      activeBrushTooltip = slug;
+    }
+    
+    if (typeof window !== 'undefined') {
+      const url = new URL(window.location.href);
+      let openParam = url.searchParams.get('open') || '';
+      let openStates = openParam ? openParam.split(',').filter(Boolean) : [];
+      
+      openStates = openStates.filter(s => !(s.startsWith(`${windowId}-brush-tool-`) && s.endsWith('-tooltip')));
+      
+      if (activeBrushTooltip) {
+        openStates.push(`${windowId}-brush-tool-${activeBrushTooltip}-tooltip`);
+      }
+      
+      if (openStates.length > 0) {
+        url.searchParams.set('open', openStates.join(','));
+      } else {
+        url.searchParams.delete('open');
+      }
+      
+      const search = url.searchParams.toString().replace(/%2C/g, ',');
+      window.history.replaceState({}, '', `${url.pathname}?${search}`);
+    }
+  }
+
+  const brushItems = [
+    { name: 'Blob', icon: 'fa-circle-dot', shortcut: 'Space Bar, 7' },
+    { name: 'Clay', icon: 'fa-cube', shortcut: 'Space Bar, 3' },
+    { name: 'Clay Strips', icon: 'fa-layer-group', shortcut: 'Space Bar, 4' },
+    { name: 'Clay Thumb', icon: 'fa-hand-point-up', shortcut: '' },
+    { name: 'Crease Polish', icon: 'fa-compress', shortcut: '' },
+    { name: 'Create Sharp', icon: 'fa-pen-nib', shortcut: '' },
+    { name: 'Draw', icon: 'fa-paintbrush', shortcut: 'Space Bar, 1' },
+    { name: 'Draw Sharp', icon: 'fa-pen-nib', shortcut: 'Space Bar, 2' },
+    { name: 'Inflate/Deflate', icon: 'fa-cloud', shortcut: 'Space Bar, 6' },
+    { name: 'Layer', icon: 'fa-cubes', shortcut: 'Space Bar, 5' },
+    { name: 'Full/Deepen', icon: 'fa-fill-drip', shortcut: '' },
+    { name: 'Flatten', icon: 'fa-ruler-horizontal', shortcut: 'Space Bar, 0' },
+    { name: 'Contrast', icon: 'fa-circle-half-stroke', shortcut: '' },
+    { name: 'Plateu', icon: 'fa-window-minimize', shortcut: '' },
+    { name: 'Scape Multiplane', icon: 'fa-gavel', shortcut: '' },
+    { name: 'Scrape/Fill', icon: 'fa-eraser', shortcut: '' },
+    { name: 'Smooth', icon: 'fa-droplet', shortcut: 'Space Bar, 9' },
+    { name: 'Trim', icon: 'fa-scissors', shortcut: '' },
+    { name: 'Boundary', icon: 'fa-border-all', shortcut: '' },
+    { name: 'Elastic Grab', icon: 'fa-hand', shortcut: '' },
+    { name: 'Elastic Snake Hook', icon: 'fa-worm', shortcut: '' },
+    { name: 'Grab', icon: 'fa-hand', shortcut: 'G' },
+    { name: 'Grab 2D', icon: 'fa-hand', shortcut: '' },
+    { name: 'Grab Silhouette', icon: 'fa-hand', shortcut: '' },
+    { name: 'Nudge', icon: 'fa-hand-holding', shortcut: '' },
+    { name: 'Pinch/Magnify', icon: 'fa-compress-arrows-alt', shortcut: '' },
+    { name: 'Pose', icon: 'fa-person-walking', shortcut: '' },
+    { name: 'Pull', icon: 'fa-arrows-left-right', shortcut: '' },
+    { name: 'Relax Pinch', icon: 'fa-compress-arrows-alt', shortcut: '' },
+    { name: 'Relax Slide', icon: 'fa-arrows-left-right', shortcut: '' },
+    { name: 'Snake Hook', icon: 'fa-worm', shortcut: 'K' },
+    { name: 'Thumb', icon: 'fa-hand-point-up', shortcut: '' }
+  ];
 
   const items = [
     { type: 'material', name: 'Boards - Basketweave', color: '#8b5a2b' },
@@ -53,8 +143,65 @@
 </script>
 
 <div class="h-full flex flex-col bg-[#282828]" alt-id="Bottom Asset Browser panel">
-  <!-- Header -->
-  <div class="h-12 flex items-center px-4 border-b border-[#1f1f1f] justify-between text-[15px]" alt-id="Bottom Asset Browser header">
+  {#if isBrushLayout}
+    <!-- Brush Layout Header -->
+    <div class="h-[28px] flex items-center px-2 border-b border-[#1f1f1f] bg-[#282828] text-[#a0a0a0] text-[12px]" alt-id="Bottom Asset Browser brush layout header">
+      <div class="flex items-center gap-2 h-full">
+        <EditorSelector bind:editor={currentEditor} windowId={windowId} />
+        
+        <div class="flex items-center h-full ml-2">
+          <div class="px-3 h-full flex items-center text-white bg-[#444] border-x border-[#1f1f1f] cursor-pointer" alt-id="All assets tab, currently selected">
+            All
+          </div>
+          <div class="px-3 h-full flex items-center hover:bg-[#333] border-r border-[#1f1f1f] cursor-pointer" alt-id="General assets tab">
+            General
+          </div>
+          <div class="px-3 h-full flex items-center hover:bg-[#333] border-r border-[#1f1f1f] cursor-pointer" alt-id="Paint assets tab">
+            Paint
+          </div>
+          <div class="px-3 h-full flex items-center hover:bg-[#333] border-r border-[#1f1f1f] cursor-pointer" alt-id="Simulation assets tab">
+            Simulation
+          </div>
+        </div>
+      </div>
+      
+      <div class="flex-1"></div>
+      
+      <div class="flex items-center gap-3">
+        <div class="flex items-center gap-1 cursor-pointer hover:text-white" alt-id="Assets count and display options">
+          <span class="pointer-events-none">38</span>
+          <i class="fa-solid fa-list-ul text-[12px] opacity-80 pointer-events-none ml-1"></i>
+          <i class="fa-solid fa-chevron-down text-[8px] opacity-70 pointer-events-none"></i>
+        </div>
+        
+        <div class="flex items-center bg-[#1a1a1a] border border-[#151515] rounded overflow-hidden shadow-[inset_0_1px_2px_rgba(0,0,0,0.5)]">
+          <div class="px-2 py-1 flex items-center gap-2 w-48 text-[12px]">
+            <i class="fa-light fa-magnifying-glass opacity-70"></i>
+            <span class="opacity-60">Search</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Brush Layout Content -->
+    <div class="flex-1 overflow-x-auto overflow-y-hidden bg-[#232323] p-1 flex items-center gap-1 relative" alt-id="Asset Browser brush horizontal list">
+      {#each brushItems as tool}
+        <div class="w-[50px] h-[50px] shrink-0 {activeBrushTooltip === tool.name.toLowerCase().replace(/[\/ ]/g, '-') ? 'bg-[#444]' : 'bg-[#333] hover:bg-[#444]'} rounded-[4px] border border-[#1f1f1f] flex flex-col items-center justify-center cursor-pointer group relative" on:click={() => handleBrushToolClick(tool.name)} alt-id="{tool.name} brush button">
+           <i class="fa-solid {tool.icon} text-[20px] {activeBrushTooltip === tool.name.toLowerCase().replace(/[\/ ]/g, '-') ? 'text-white' : 'text-[#888] group-hover:text-[#aaa]'} pointer-events-none"></i>
+           {#if activeBrushTooltip === tool.name.toLowerCase().replace(/[\/ ]/g, '-')}
+             <div class="absolute bottom-[54px] left-1/2 -translate-x-1/2 bg-[#1a1a1a] text-white px-3 py-2 rounded shadow-[0_2px_8px_rgba(0,0,0,0.5)] border border-[#2a2a2a] z-50 whitespace-nowrap flex flex-col gap-1" alt-id="{tool.name} tool tooltip">
+                <div class="text-[13px] pointer-events-none">{tool.name}</div>
+                {#if tool.shortcut}
+                  <div class="text-[11px] text-[#a0a0a0]">Shortcut: ⇧ {tool.shortcut}</div>
+                {/if}
+             </div>
+           {/if}
+        </div>
+      {/each}
+    </div>
+  {:else}
+    <!-- Default Asset Browser Header -->
+    <div class="h-12 flex items-center px-4 border-b border-[#1f1f1f] justify-between text-[15px]" alt-id="Bottom Asset Browser header">
     <div class="flex items-center gap-4">
       <EditorSelector bind:editor={currentEditor} windowId={windowId} />
       <div class="cursor-pointer hover:text-white text-[#a0a0a0] px-1" alt-id="Asset browser menu, second element in the bottom Asset Browser header">
@@ -166,4 +313,5 @@
       </div>
     </div>
   </div>
+  {/if}
 </div>

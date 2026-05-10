@@ -5,6 +5,8 @@
   import Properties from './Properties.svelte';
   import ImageEditor from './ImageEditor.svelte';
   import Compositor from './Compositor.svelte';
+  import ShaderEditor from './ShaderEditor.svelte';
+  import Spreadsheet from './Spreadsheet.svelte';
 
   export let initialEditor = 'viewport_3d';
   export let isMainViewport = false;
@@ -22,6 +24,8 @@
       case 'properties': return Properties;
       case 'image_editor': return ImageEditor;
       case 'compositor': return Compositor;
+      case 'shader_editor': return ShaderEditor;
+      case 'spreadsheet': return Spreadsheet;
       default: return Viewport3D;
     }
   };
