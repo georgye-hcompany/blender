@@ -1504,7 +1504,7 @@
             </div>
             
             <!-- Items -->
-            <div class="flex items-center justify-between px-3 py-1 hover:bg-[#4772b3] hover:text-white cursor-pointer group">
+            <div class="flex items-center justify-between px-3 py-1 hover:bg-[#4772b3] hover:text-white cursor-pointer group" alt-id="Tool">
               <div class="flex items-center gap-2 pointer-events-none">
                 <i class="fa-solid fa-screwdriver-wrench text-[13px] w-4 text-center"></i>
                 <span>Tool</span>
@@ -1512,7 +1512,7 @@
               <div class="w-[14px] h-[14px] bg-[#4772b3] border border-[#111] rounded-sm flex items-center justify-center pointer-events-none shadow-inner"><i class="fa-solid fa-check text-[10px] text-white"></i></div>
             </div>
             
-            <div class="flex items-center justify-between px-3 py-1 hover:bg-[#4772b3] hover:text-white cursor-pointer group">
+            <div class="flex items-center justify-between px-3 py-1 hover:bg-[#4772b3] hover:text-white cursor-pointer group" alt-id="Render">
               <div class="flex items-center gap-2 pointer-events-none">
                 <i class="fa-solid fa-camera-retro text-[13px] w-4 text-center"></i>
                 <span>Render</span>
@@ -1520,7 +1520,7 @@
               <div class="w-[14px] h-[14px] bg-[#4772b3] border border-[#111] rounded-sm flex items-center justify-center pointer-events-none shadow-inner"><i class="fa-solid fa-check text-[10px] text-white"></i></div>
             </div>
             
-            <div class="flex items-center justify-between px-3 py-1 hover:bg-[#4772b3] hover:text-white cursor-pointer group">
+            <div class="flex items-center justify-between px-3 py-1 hover:bg-[#4772b3] hover:text-white cursor-pointer group" alt-id="Output">
               <div class="flex items-center gap-2 pointer-events-none">
                 <i class="fa-solid fa-print text-[13px] w-4 text-center"></i>
                 <span>Output</span>
@@ -1528,7 +1528,7 @@
               <div class="w-[14px] h-[14px] bg-[#4772b3] border border-[#111] rounded-sm flex items-center justify-center pointer-events-none shadow-inner"><i class="fa-solid fa-check text-[10px] text-white"></i></div>
             </div>
             
-            <div class="flex items-center justify-between px-3 py-1 hover:bg-[#4772b3] hover:text-white cursor-pointer group">
+            <div class="flex items-center justify-between px-3 py-1 hover:bg-[#4772b3] hover:text-white cursor-pointer group" alt-id="View Layer">
               <div class="flex items-center gap-2 pointer-events-none">
                 <i class="fa-solid fa-layer-group text-[13px] w-4 text-center"></i>
                 <span>View Layer</span>
@@ -1536,7 +1536,7 @@
               <div class="w-[14px] h-[14px] bg-[#4772b3] border border-[#111] rounded-sm flex items-center justify-center pointer-events-none shadow-inner"><i class="fa-solid fa-check text-[10px] text-white"></i></div>
             </div>
             
-            <div class="flex items-center justify-between px-3 py-1 hover:bg-[#4772b3] hover:text-white cursor-pointer group">
+            <div class="flex items-center justify-between px-3 py-1 hover:bg-[#4772b3] hover:text-white cursor-pointer group" alt-id="Scene">
               <div class="flex items-center gap-2 pointer-events-none">
                 <i class="fa-solid fa-clapperboard text-[13px] w-4 text-center"></i>
                 <span>Scene</span>
@@ -1544,7 +1544,7 @@
               <div class="w-[14px] h-[14px] bg-[#4772b3] border border-[#111] rounded-sm flex items-center justify-center pointer-events-none shadow-inner"><i class="fa-solid fa-check text-[10px] text-white"></i></div>
             </div>
             
-            <div class="flex items-center justify-between px-3 py-1 hover:bg-[#4772b3] hover:text-white cursor-pointer group">
+            <div class="flex items-center justify-between px-3 py-1 hover:bg-[#4772b3] hover:text-white cursor-pointer group" alt-id="World">
               <div class="flex items-center gap-2 pointer-events-none">
                 <i class="fa-solid fa-globe text-[13px] w-4 text-center"></i>
                 <span>World</span>
@@ -1552,7 +1552,7 @@
               <div class="w-[14px] h-[14px] bg-[#4772b3] border border-[#111] rounded-sm flex items-center justify-center pointer-events-none shadow-inner"><i class="fa-solid fa-check text-[10px] text-white"></i></div>
             </div>
             
-            <div class="flex items-center justify-between px-3 py-1 hover:bg-[#4772b3] hover:text-white cursor-pointer group">
+            <div class="flex items-center justify-between px-3 py-1 hover:bg-[#4772b3] hover:text-white cursor-pointer group" alt-id="Collection">
               <div class="flex items-center gap-2 pointer-events-none">
                 <i class="fa-solid fa-box-archive text-[13px] w-4 text-center"></i>
                 <span>Collection</span>
@@ -1560,7 +1560,7 @@
               <div class="w-[14px] h-[14px] bg-[#4772b3] border border-[#111] rounded-sm flex items-center justify-center pointer-events-none shadow-inner"><i class="fa-solid fa-check text-[10px] text-white"></i></div>
             </div>
             
-            <div class="flex items-center justify-between px-3 py-1 hover:bg-[#4772b3] hover:text-white cursor-pointer group">
+            <div class="flex items-center justify-between px-3 py-1 hover:bg-[#4772b3] hover:text-white cursor-pointer group" alt-id="Object">
               <div class="flex items-center gap-2 pointer-events-none">
                 <i class="fa-solid fa-square-dashed text-[13px] w-4 text-center"></i>
                 <span>Object</span>
@@ -1568,7 +1568,7 @@
               <div class="w-[14px] h-[14px] bg-[#4772b3] border border-[#111] rounded-sm flex items-center justify-center pointer-events-none shadow-inner"><i class="fa-solid fa-check text-[10px] text-white"></i></div>
             </div>
             
-            <div class="flex items-center justify-between px-3 py-1 hover:bg-[#4772b3] hover:text-white cursor-pointer group">
+            <div class="flex items-center justify-between px-3 py-1 hover:bg-[#4772b3] hover:text-white cursor-pointer group" alt-id="Modifiers">
               <div class="flex items-center gap-2 pointer-events-none">
                 <i class="fa-solid fa-wrench text-[13px] w-4 text-center"></i>
                 <span>Modifiers</span>
@@ -1576,7 +1576,7 @@
               <div class="w-[14px] h-[14px] bg-[#4772b3] border border-[#111] rounded-sm flex items-center justify-center pointer-events-none shadow-inner"><i class="fa-solid fa-check text-[10px] text-white"></i></div>
             </div>
             
-            <div class="flex items-center justify-between px-3 py-1 hover:bg-[#4772b3] hover:text-white cursor-pointer group">
+            <div class="flex items-center justify-between px-3 py-1 hover:bg-[#4772b3] hover:text-white cursor-pointer group" alt-id="Effects">
               <div class="flex items-center gap-2 pointer-events-none">
                 <i class="fa-solid fa-wand-magic-sparkles text-[13px] w-4 text-center"></i>
                 <span>Effects</span>
@@ -1584,7 +1584,7 @@
               <div class="w-[14px] h-[14px] bg-[#4772b3] border border-[#111] rounded-sm flex items-center justify-center pointer-events-none shadow-inner"><i class="fa-solid fa-check text-[10px] text-white"></i></div>
             </div>
             
-            <div class="flex items-center justify-between px-3 py-1 hover:bg-[#4772b3] hover:text-white cursor-pointer group">
+            <div class="flex items-center justify-between px-3 py-1 hover:bg-[#4772b3] hover:text-white cursor-pointer group" alt-id="Particles">
               <div class="flex items-center gap-2 pointer-events-none">
                 <i class="fa-solid fa-circle-nodes text-[13px] w-4 text-center"></i>
                 <span>Particles</span>
@@ -1592,7 +1592,7 @@
               <div class="w-[14px] h-[14px] bg-[#4772b3] border border-[#111] rounded-sm flex items-center justify-center pointer-events-none shadow-inner"><i class="fa-solid fa-check text-[10px] text-white"></i></div>
             </div>
             
-            <div class="flex items-center justify-between px-3 py-1 hover:bg-[#4772b3] hover:text-white cursor-pointer group">
+            <div class="flex items-center justify-between px-3 py-1 hover:bg-[#4772b3] hover:text-white cursor-pointer group" alt-id="Physics">
               <div class="flex items-center gap-2 pointer-events-none">
                 <i class="fa-solid fa-atom text-[13px] w-4 text-center"></i>
                 <span>Physics</span>
@@ -1600,7 +1600,7 @@
               <div class="w-[14px] h-[14px] bg-[#4772b3] border border-[#111] rounded-sm flex items-center justify-center pointer-events-none shadow-inner"><i class="fa-solid fa-check text-[10px] text-white"></i></div>
             </div>
             
-            <div class="flex items-center justify-between px-3 py-1 hover:bg-[#4772b3] hover:text-white cursor-pointer group">
+            <div class="flex items-center justify-between px-3 py-1 hover:bg-[#4772b3] hover:text-white cursor-pointer group" alt-id="Constraints">
               <div class="flex items-center gap-2 pointer-events-none">
                 <i class="fa-solid fa-link text-[13px] w-4 text-center"></i>
                 <span>Constraints</span>
@@ -1608,7 +1608,7 @@
               <div class="w-[14px] h-[14px] bg-[#4772b3] border border-[#111] rounded-sm flex items-center justify-center pointer-events-none shadow-inner"><i class="fa-solid fa-check text-[10px] text-white"></i></div>
             </div>
             
-            <div class="flex items-center justify-between px-3 py-1 hover:bg-[#4772b3] hover:text-white cursor-pointer group">
+            <div class="flex items-center justify-between px-3 py-1 hover:bg-[#4772b3] hover:text-white cursor-pointer group" alt-id="Data">
               <div class="flex items-center gap-2 pointer-events-none">
                 <i class="fa-solid fa-draw-polygon text-[13px] w-4 text-center"></i>
                 <span>Data</span>
@@ -1616,7 +1616,7 @@
               <div class="w-[14px] h-[14px] bg-[#4772b3] border border-[#111] rounded-sm flex items-center justify-center pointer-events-none shadow-inner"><i class="fa-solid fa-check text-[10px] text-white"></i></div>
             </div>
             
-            <div class="flex items-center justify-between px-3 py-1 hover:bg-[#4772b3] hover:text-white cursor-pointer group">
+            <div class="flex items-center justify-between px-3 py-1 hover:bg-[#4772b3] hover:text-white cursor-pointer group" alt-id="Bone">
               <div class="flex items-center gap-2 pointer-events-none">
                 <i class="fa-solid fa-bone text-[13px] w-4 text-center"></i>
                 <span>Bone</span>
@@ -1624,7 +1624,7 @@
               <div class="w-[14px] h-[14px] bg-[#4772b3] border border-[#111] rounded-sm flex items-center justify-center pointer-events-none shadow-inner"><i class="fa-solid fa-check text-[10px] text-white"></i></div>
             </div>
             
-            <div class="flex items-center justify-between px-3 py-1 hover:bg-[#4772b3] hover:text-white cursor-pointer group">
+            <div class="flex items-center justify-between px-3 py-1 hover:bg-[#4772b3] hover:text-white cursor-pointer group" alt-id="Bone Constraints">
               <div class="flex items-center gap-2 pointer-events-none">
                 <i class="fa-solid fa-link text-[13px] w-4 text-center"></i>
                 <span>Bone Constraints</span>
@@ -1632,7 +1632,7 @@
               <div class="w-[14px] h-[14px] bg-[#4772b3] border border-[#111] rounded-sm flex items-center justify-center pointer-events-none shadow-inner"><i class="fa-solid fa-check text-[10px] text-white"></i></div>
             </div>
             
-            <div class="flex items-center justify-between px-3 py-1 hover:bg-[#4772b3] hover:text-white cursor-pointer group">
+            <div class="flex items-center justify-between px-3 py-1 hover:bg-[#4772b3] hover:text-white cursor-pointer group" alt-id="Material">
               <div class="flex items-center gap-2 pointer-events-none">
                 <i class="fa-solid fa-circle text-[13px] w-4 text-center"></i>
                 <span>Material</span>
@@ -1640,7 +1640,7 @@
               <div class="w-[14px] h-[14px] bg-[#4772b3] border border-[#111] rounded-sm flex items-center justify-center pointer-events-none shadow-inner"><i class="fa-solid fa-check text-[10px] text-white"></i></div>
             </div>
             
-            <div class="flex items-center justify-between px-3 py-1 hover:bg-[#4772b3] hover:text-white cursor-pointer group">
+            <div class="flex items-center justify-between px-3 py-1 hover:bg-[#4772b3] hover:text-white cursor-pointer group" alt-id="Texture">
               <div class="flex items-center gap-2 pointer-events-none">
                 <i class="fa-solid fa-chess-board text-[13px] w-4 text-center"></i>
                 <span>Texture</span>
@@ -1648,7 +1648,7 @@
               <div class="w-[14px] h-[14px] bg-[#4772b3] border border-[#111] rounded-sm flex items-center justify-center pointer-events-none shadow-inner"><i class="fa-solid fa-check text-[10px] text-white"></i></div>
             </div>
             
-            <div class="flex items-center justify-between px-3 py-1 hover:bg-[#4772b3] hover:text-white cursor-pointer group">
+            <div class="flex items-center justify-between px-3 py-1 hover:bg-[#4772b3] hover:text-white cursor-pointer group" alt-id="Strip">
               <div class="flex items-center gap-2 pointer-events-none">
                 <i class="fa-solid fa-server text-[13px] w-4 text-center"></i>
                 <span>Strip</span>
@@ -1656,7 +1656,7 @@
               <div class="w-[14px] h-[14px] bg-[#4772b3] border border-[#111] rounded-sm flex items-center justify-center pointer-events-none shadow-inner"><i class="fa-solid fa-check text-[10px] text-white"></i></div>
             </div>
             
-            <div class="flex items-center justify-between px-3 py-1 hover:bg-[#4772b3] hover:text-white cursor-pointer group">
+            <div class="flex items-center justify-between px-3 py-1 hover:bg-[#4772b3] hover:text-white cursor-pointer group" alt-id="Strip Modifiers">
               <div class="flex items-center gap-2 pointer-events-none">
                 <i class="fa-solid fa-wrench text-[13px] w-4 text-center"></i>
                 <span>Strip Modifiers</span>
@@ -1883,11 +1883,11 @@
                       </div>
                       <span class="text-[13px] text-[#ccc]">Denoise</span>
                     </div>
-                    <div class="flex items-center gap-2 px-6 py-1 cursor-pointer hover:text-white text-[#ccc] bg-[#282828]">
+                    <div class="flex items-center gap-2 px-6 py-1 cursor-pointer hover:text-white text-[#ccc] bg-[#282828]" alt-id="Lights">
                       <i class="fa-solid fa-chevron-right text-[11px] w-3 text-center"></i>
                       <span class="text-[13px]">Lights</span>
                     </div>
-                    <div class="flex items-center gap-2 px-6 py-1 cursor-pointer hover:text-white text-[#ccc] bg-[#282828] pb-3">
+                    <div class="flex items-center gap-2 px-6 py-1 cursor-pointer hover:text-white text-[#ccc] bg-[#282828] pb-3" alt-id="Advanced">
                       <i class="fa-solid fa-chevron-right text-[11px] w-3 text-center"></i>
                       <span class="text-[13px]">Advanced</span>
                     </div>
@@ -2658,7 +2658,7 @@
               
               {#if isBakeExpanded}
                 <div class="flex flex-col gap-2 p-3 pt-2 bg-[#282828] border-t border-[#1f1f1f] rounded-b-[5px]">
-                  <div class="w-full flex bg-[#4d4d4d] border border-[#222] rounded-[3px] h-[22px] items-center justify-center relative cursor-pointer shadow-[inset_0_1px_2px_rgba(0,0,0,0.2)]">
+                  <div class="w-full flex bg-[#4d4d4d] border border-[#222] rounded-[3px] h-[22px] items-center justify-center relative cursor-pointer shadow-[inset_0_1px_2px_rgba(0,0,0,0.2)]" alt-id="Bake">
                     <i class="fa-solid fa-camera text-[12px] text-[#eee] absolute left-2 top-1/2 -translate-y-1/2 pointer-events-none"></i>
                     <span class="text-[13px] text-[#eee] pointer-events-none">Bake</span>
                   </div>
@@ -3009,15 +3009,15 @@
                     <span class="w-[120px] shrink-0 text-right text-[12px] text-[#ccc] pointer-events-none">Line Thickness Mode</span>
                     <div class="flex-1 flex bg-[#3d3d3d] border border-[#222] rounded-[3px] shadow-[inset_0_1px_2px_rgba(0,0,0,0.2)] overflow-hidden h-[22px]">
                       <div 
-                        class="flex-1 flex items-center justify-center cursor-pointer {isFreestyleLineThicknessModeAbsolute ? 'bg-[#4772b3] border-r border-[#333]' : 'hover:bg-[#4d4d4d]'}"
-                        on:click={() => setFreestyleLineThicknessMode(true)}
+                        class="flex-1 flex items-center justify-center cursor-pointer {isFreestyleLineThicknessModeAbsolute ? 'bg-[#4772b3] border-r border-[#333]' : 'hover:bg-[#4d4d4d]'}" alt-id="Freestyle Line Thickness Mode: Absolute"
+                        on:click={() = alt-id="Absolute"> setFreestyleLineThicknessMode(true)}
                         alt-id="Freestyle Line Thickness Mode Absolute; {isFreestyleLineThicknessModeAbsolute ? 'selected' : 'unselected'}"
                       >
                         <span class="text-[13px] {isFreestyleLineThicknessModeAbsolute ? 'text-white' : 'text-[#ccc]'} pointer-events-none">Absolute</span>
                       </div>
                       <div 
-                        class="flex-1 flex items-center justify-center cursor-pointer {!isFreestyleLineThicknessModeAbsolute ? 'bg-[#4772b3] border-l border-[#333]' : 'hover:bg-[#4d4d4d]'}"
-                        on:click={() => setFreestyleLineThicknessMode(false)}
+                        class="flex-1 flex items-center justify-center cursor-pointer {!isFreestyleLineThicknessModeAbsolute ? 'bg-[#4772b3] border-l border-[#333]' : 'hover:bg-[#4d4d4d]'}" alt-id="Freestyle Line Thickness Mode: Relative"
+                        on:click={() = alt-id="Relative"> setFreestyleLineThicknessMode(false)}
                         alt-id="Freestyle Line Thickness Mode Relative; {!isFreestyleLineThicknessModeAbsolute ? 'selected' : 'unselected'}"
                       >
                         <span class="text-[13px] {!isFreestyleLineThicknessModeAbsolute ? 'text-white' : 'text-[#ccc]'} pointer-events-none">Relative</span>
@@ -3384,15 +3384,15 @@
                 <div class="flex flex-col gap-2 p-3 pt-2 bg-[#282828] border-t border-[#1f1f1f] rounded-b-[5px]">
                   <div class="flex-1 flex bg-[#3d3d3d] border border-[#222] rounded-[3px] shadow-[inset_0_1px_2px_rgba(0,0,0,0.2)] overflow-hidden h-[22px]">
                     <div 
-                      class="flex-1 flex items-center justify-center cursor-pointer {isStereoscopyStereo3D ? 'bg-[#4772b3] border-r border-[#333]' : 'hover:bg-[#4d4d4d]'}"
-                      on:click={() => setStereoscopyStereo3D(true)}
+                      class="flex-1 flex items-center justify-center cursor-pointer {isStereoscopyStereo3D ? 'bg-[#4772b3] border-r border-[#333]' : 'hover:bg-[#4d4d4d]'}" alt-id="Stereoscopy Mode: Stereo 3D"
+                      on:click={() = alt-id="Stereo 3D"> setStereoscopyStereo3D(true)}
                       alt-id="Stereo 3D / Multi-View toggle; Stereo 3D {isStereoscopyStereo3D ? 'selected' : 'unselected'}"
                     >
                       <span class="text-[13px] {isStereoscopyStereo3D ? 'text-white' : 'text-[#ccc]'} pointer-events-none">Stereo 3D</span>
                     </div>
                     <div 
-                      class="flex-1 flex items-center justify-center cursor-pointer {!isStereoscopyStereo3D ? 'bg-[#4772b3] border-l border-[#333]' : 'hover:bg-[#4d4d4d]'}"
-                      on:click={() => setStereoscopyStereo3D(false)}
+                      class="flex-1 flex items-center justify-center cursor-pointer {!isStereoscopyStereo3D ? 'bg-[#4772b3] border-l border-[#333]' : 'hover:bg-[#4d4d4d]'}" alt-id="Stereoscopy Mode: Multi-View"
+                      on:click={() = alt-id="Multi-View"> setStereoscopyStereo3D(false)}
                       alt-id="Stereo 3D / Multi-View toggle; Multi-View {!isStereoscopyStereo3D ? 'selected' : 'unselected'}"
                     >
                       <span class="text-[13px] {!isStereoscopyStereo3D ? 'text-white' : 'text-[#ccc]'} pointer-events-none">Multi-View</span>
@@ -3418,7 +3418,7 @@
                         <i class="fa-solid fa-check text-[10px] text-white"></i>
                       </div>
                     </div>
-                    <div class="flex items-center justify-center py-[2px] bg-[#282828] border-t border-[#111] cursor-pointer hover:bg-[#333]">
+                    <div class="flex items-center justify-center py-[2px] bg-[#282828] border-t border-[#111] cursor-pointer hover:bg-[#333]" alt-id="..">
                       <span class="text-[14px] font-bold text-[#ccc] leading-none mb-1">..</span>
                     </div>
                   </div>
@@ -6974,7 +6974,7 @@
                       <i class="fa-solid fa-draw-polygon text-[12px] text-[#33cc66] mr-2"></i>
                       <span class="text-[13px] text-[#eee] flex-1 opacity-50">Mesh</span>
                     </div>
-                    <div class="flex items-center justify-center w-5 cursor-pointer opacity-70 hover:opacity-100">
+                    <div class="flex items-center justify-center w-5 cursor-pointer opacity-70 hover:opacity-100" alt-id="interactive element 6976">
                       <i class="fa-solid fa-pen text-[12px] text-[#888]"></i>
                     </div>
                   </div>
@@ -7402,7 +7402,7 @@
                   <div class="flex items-center gap-2 mt-1 mb-2">
                     <span class="w-[120px] shrink-0 text-right text-[12px] text-[#ccc] pointer-events-none">Surface</span>
                     <div class="w-1.5 h-1.5 rounded-full bg-[#70b370]"></div>
-                    <div class="flex-1 bg-[#1a1a1a] border border-[#151515] rounded-[3px] h-[22px] flex items-center px-2 cursor-pointer shadow-[inset_0_1px_2px_rgba(0,0,0,0.5)] justify-between hover:bg-[#222]">
+                    <div class="flex-1 bg-[#1a1a1a] border border-[#151515] rounded-[3px] h-[22px] flex items-center px-2 cursor-pointer shadow-[inset_0_1px_2px_rgba(0,0,0,0.5)] justify-between hover:bg-[#222]" alt-id="Principled BSDF">
                       <span class="text-[13px] text-[#eee]">Principled BSDF</span>
                     </div>
                   </div>
@@ -7413,7 +7413,7 @@
                       <div class="w-1.5 h-1.5 rounded-full bg-[#cccc33]"></div>
                       <span class="text-[12px] text-[#ccc] pointer-events-none">Base Color</span>
                     </div>
-                    <div class="flex-1 bg-[#1a1a1a] border border-[#151515] rounded-[3px] h-[22px] flex items-center px-2 cursor-pointer shadow-[inset_0_1px_2px_rgba(0,0,0,0.5)] hover:bg-[#222]">
+                    <div class="flex-1 bg-[#1a1a1a] border border-[#151515] rounded-[3px] h-[22px] flex items-center px-2 cursor-pointer shadow-[inset_0_1px_2px_rgba(0,0,0,0.5)] hover:bg-[#222]" alt-id="Mix">
                       <span class="text-[13px] text-[#eee]">Mix</span>
                     </div>
                   </div>
@@ -7436,7 +7436,7 @@
                       <div class="w-1.5 h-1.5 rounded-full bg-[#cccc33]"></div>
                       <span class="text-[12px] text-[#ccc] pointer-events-none">Roughness</span>
                     </div>
-                    <div class="flex-1 bg-[#1a1a1a] border border-[#151515] rounded-[3px] h-[22px] flex items-center px-2 cursor-pointer shadow-[inset_0_1px_2px_rgba(0,0,0,0.5)] hover:bg-[#222]">
+                    <div class="flex-1 bg-[#1a1a1a] border border-[#151515] rounded-[3px] h-[22px] flex items-center px-2 cursor-pointer shadow-[inset_0_1px_2px_rgba(0,0,0,0.5)] hover:bg-[#222]" alt-id="Multiply Add">
                       <span class="text-[13px] text-[#eee]">Multiply Add</span>
                     </div>
                   </div>
@@ -7471,41 +7471,41 @@
                       <div class="w-1.5 h-1.5 rounded-full bg-[#8c66ff]"></div>
                       <span class="text-[12px] text-[#ccc] pointer-events-none">Normal</span>
                     </div>
-                    <div class="flex-1 bg-[#1a1a1a] border border-[#151515] rounded-[3px] h-[22px] flex items-center px-2 cursor-pointer shadow-[inset_0_1px_2px_rgba(0,0,0,0.5)] hover:bg-[#222]">
+                    <div class="flex-1 bg-[#1a1a1a] border border-[#151515] rounded-[3px] h-[22px] flex items-center px-2 cursor-pointer shadow-[inset_0_1px_2px_rgba(0,0,0,0.5)] hover:bg-[#222]" alt-id="Bump">
                       <span class="text-[13px] text-[#eee]">Bump</span>
                     </div>
                   </div>
 
                   <div class="flex flex-col pl-1">
-                    <div class="flex items-center gap-2 py-0.5 cursor-pointer hover:bg-[#333] rounded-[3px]">
+                    <div class="flex items-center gap-2 py-0.5 cursor-pointer hover:bg-[#333] rounded-[3px]" alt-id="Diffuse">
                       <i class="fa-solid fa-chevron-right text-[10px] text-[#aaa] w-3 text-center"></i>
                       <span class="text-[13px] text-[#ccc]">Diffuse</span>
                     </div>
-                    <div class="flex items-center gap-2 py-0.5 cursor-pointer hover:bg-[#333] rounded-[3px]">
+                    <div class="flex items-center gap-2 py-0.5 cursor-pointer hover:bg-[#333] rounded-[3px]" alt-id="Subsurface">
                       <i class="fa-solid fa-chevron-right text-[10px] text-[#aaa] w-3 text-center"></i>
                       <span class="text-[13px] text-[#ccc]">Subsurface</span>
                     </div>
-                    <div class="flex items-center gap-2 py-0.5 cursor-pointer hover:bg-[#333] rounded-[3px]">
+                    <div class="flex items-center gap-2 py-0.5 cursor-pointer hover:bg-[#333] rounded-[3px]" alt-id="Specular">
                       <i class="fa-solid fa-chevron-right text-[10px] text-[#aaa] w-3 text-center"></i>
                       <span class="text-[13px] text-[#ccc]">Specular</span>
                     </div>
-                    <div class="flex items-center gap-2 py-0.5 cursor-pointer hover:bg-[#333] rounded-[3px]">
+                    <div class="flex items-center gap-2 py-0.5 cursor-pointer hover:bg-[#333] rounded-[3px]" alt-id="Transmission">
                       <i class="fa-solid fa-chevron-right text-[10px] text-[#aaa] w-3 text-center"></i>
                       <span class="text-[13px] text-[#ccc]">Transmission</span>
                     </div>
-                    <div class="flex items-center gap-2 py-0.5 cursor-pointer hover:bg-[#333] rounded-[3px]">
+                    <div class="flex items-center gap-2 py-0.5 cursor-pointer hover:bg-[#333] rounded-[3px]" alt-id="Coat">
                       <i class="fa-solid fa-chevron-right text-[10px] text-[#aaa] w-3 text-center"></i>
                       <span class="text-[13px] text-[#ccc]">Coat</span>
                     </div>
-                    <div class="flex items-center gap-2 py-0.5 cursor-pointer hover:bg-[#333] rounded-[3px]">
+                    <div class="flex items-center gap-2 py-0.5 cursor-pointer hover:bg-[#333] rounded-[3px]" alt-id="Sheen">
                       <i class="fa-solid fa-chevron-right text-[10px] text-[#aaa] w-3 text-center"></i>
                       <span class="text-[13px] text-[#ccc]">Sheen</span>
                     </div>
-                    <div class="flex items-center gap-2 py-0.5 cursor-pointer hover:bg-[#333] rounded-[3px]">
+                    <div class="flex items-center gap-2 py-0.5 cursor-pointer hover:bg-[#333] rounded-[3px]" alt-id="Emission">
                       <i class="fa-solid fa-chevron-right text-[10px] text-[#aaa] w-3 text-center"></i>
                       <span class="text-[13px] text-[#ccc]">Emission</span>
                     </div>
-                    <div class="flex items-center gap-2 py-0.5 cursor-pointer hover:bg-[#333] rounded-[3px]">
+                    <div class="flex items-center gap-2 py-0.5 cursor-pointer hover:bg-[#333] rounded-[3px]" alt-id="Thin Film">
                       <i class="fa-solid fa-chevron-right text-[10px] text-[#aaa] w-3 text-center"></i>
                       <span class="text-[13px] text-[#ccc]">Thin Film</span>
                     </div>
@@ -7532,7 +7532,7 @@
                   <div class="flex items-center gap-2 mt-1">
                     <span class="w-[120px] shrink-0 text-right text-[12px] text-[#ccc] pointer-events-none">Volume</span>
                     <div class="w-1.5 h-1.5 rounded-full bg-[#70b370]"></div>
-                    <div class="flex-1 bg-[#1a1a1a] border border-[#151515] rounded-[3px] h-[22px] flex items-center px-2 cursor-pointer shadow-[inset_0_1px_2px_rgba(0,0,0,0.5)]">
+                    <div class="flex-1 bg-[#1a1a1a] border border-[#151515] rounded-[3px] h-[22px] flex items-center px-2 cursor-pointer shadow-[inset_0_1px_2px_rgba(0,0,0,0.5)]" alt-id="None">
                       <span class="text-[13px] text-[#eee]">None</span>
                     </div>
                   </div>
@@ -7558,7 +7558,7 @@
                   <div class="flex items-center gap-2 mt-1">
                     <span class="w-[120px] shrink-0 text-right text-[12px] text-[#ccc] pointer-events-none">Displacement</span>
                     <div class="w-1.5 h-1.5 rounded-full bg-[#8c66ff]"></div>
-                    <div class="flex-1 bg-[#1a1a1a] border border-[#151515] rounded-[3px] h-[22px] flex items-center px-2 cursor-pointer shadow-[inset_0_1px_2px_rgba(0,0,0,0.5)]">
+                    <div class="flex-1 bg-[#1a1a1a] border border-[#151515] rounded-[3px] h-[22px] flex items-center px-2 cursor-pointer shadow-[inset_0_1px_2px_rgba(0,0,0,0.5)]" alt-id="Default">
                       <span class="text-[13px] text-[#eee]">Default</span>
                     </div>
                   </div>
@@ -7592,21 +7592,21 @@
 
                   <!-- Nested Surface -->
                   <div class="flex flex-col">
-                    <div class="flex items-center gap-2 py-1 cursor-pointer">
+                    <div class="flex items-center gap-2 py-1 cursor-pointer" alt-id="Surface">
                       <i class="fa-solid fa-chevron-down text-[10px] text-[#aaa] w-3 text-center"></i>
                       <span class="text-[13px] text-[#eee]">Surface</span>
                     </div>
                     <div class="pl-4 flex flex-col gap-[3px] mt-1 mb-2">
                       <div class="flex items-center gap-2">
                         <span class="w-[120px] shrink-0 text-right text-[12px] text-[#ccc] pointer-events-none">Displacement</span>
-                        <div class="flex-1 bg-[#1a1a1a] border border-[#151515] rounded-[3px] h-[22px] flex items-center px-2 cursor-pointer shadow-[inset_0_1px_2px_rgba(0,0,0,0.5)] justify-between hover:bg-[#222]">
+                        <div class="flex-1 bg-[#1a1a1a] border border-[#151515] rounded-[3px] h-[22px] flex items-center px-2 cursor-pointer shadow-[inset_0_1px_2px_rgba(0,0,0,0.5)] justify-between hover:bg-[#222]" alt-id="Bump Only">
                           <span class="text-[13px] text-[#eee]">Bump Only</span>
                           <i class="fa-solid fa-chevron-down text-[10px] text-[#888]"></i>
                         </div>
                       </div>
                       <div class="flex items-center gap-2 mt-1">
                         <span class="w-[120px] shrink-0 text-right text-[12px] text-[#ccc] pointer-events-none">Emission Sampling</span>
-                        <div class="flex-1 bg-[#1a1a1a] border border-[#151515] rounded-[3px] h-[22px] flex items-center px-2 cursor-pointer shadow-[inset_0_1px_2px_rgba(0,0,0,0.5)] justify-between hover:bg-[#222]">
+                        <div class="flex-1 bg-[#1a1a1a] border border-[#151515] rounded-[3px] h-[22px] flex items-center px-2 cursor-pointer shadow-[inset_0_1px_2px_rgba(0,0,0,0.5)] justify-between hover:bg-[#222]" alt-id="Auto">
                           <span class="text-[13px] text-[#eee]">Auto</span>
                           <i class="fa-solid fa-chevron-down text-[10px] text-[#888]"></i>
                         </div>
@@ -7614,7 +7614,7 @@
                       <div class="flex items-center gap-2 mt-1">
                         <span class="w-[120px] shrink-0 text-right text-[12px] text-[#ccc] pointer-events-none"></span>
                         <div class="flex items-center gap-2">
-                          <div class="w-3.5 h-3.5 bg-[#4772b3] border border-[#151515] rounded-[2px] flex items-center justify-center cursor-pointer shadow-[inset_0_1px_2px_rgba(0,0,0,0.3)]">
+                          <div class="w-3.5 h-3.5 bg-[#4772b3] border border-[#151515] rounded-[2px] flex items-center justify-center cursor-pointer shadow-[inset_0_1px_2px_rgba(0,0,0,0.3)]" alt-id="Transparent Shadows">
                             <i class="fa-solid fa-check text-[9px] text-white"></i>
                           </div>
                           <span class="text-[13px] text-[#eee]">Transparent Shadows</span>
@@ -7623,7 +7623,7 @@
                       <div class="flex items-center gap-2 mt-1">
                         <span class="w-[120px] shrink-0 text-right text-[12px] text-[#ccc] pointer-events-none"></span>
                         <div class="flex items-center gap-2">
-                          <div class="w-3.5 h-3.5 bg-[#4772b3] border border-[#151515] rounded-[2px] flex items-center justify-center cursor-pointer shadow-[inset_0_1px_2px_rgba(0,0,0,0.3)]">
+                          <div class="w-3.5 h-3.5 bg-[#4772b3] border border-[#151515] rounded-[2px] flex items-center justify-center cursor-pointer shadow-[inset_0_1px_2px_rgba(0,0,0,0.3)]" alt-id="Bump Map Correction">
                             <i class="fa-solid fa-check text-[9px] text-white"></i>
                           </div>
                           <span class="text-[13px] text-[#eee]">Bump Map Correction</span>
@@ -7634,21 +7634,21 @@
 
                   <!-- Nested Volume -->
                   <div class="flex flex-col border-t border-[#1f1f1f] pt-1">
-                    <div class="flex items-center gap-2 py-1 cursor-pointer">
+                    <div class="flex items-center gap-2 py-1 cursor-pointer" alt-id="Volume">
                       <i class="fa-solid fa-chevron-down text-[10px] text-[#aaa] w-3 text-center"></i>
                       <span class="text-[13px] text-[#eee]">Volume</span>
                     </div>
                     <div class="pl-4 flex flex-col gap-[3px] mt-1 mb-1">
                       <div class="flex items-center gap-2">
                         <span class="w-[120px] shrink-0 text-right text-[12px] text-[#ccc] pointer-events-none">Sampling</span>
-                        <div class="flex-1 bg-[#1a1a1a] border border-[#151515] rounded-[3px] h-[22px] flex items-center px-2 cursor-pointer shadow-[inset_0_1px_2px_rgba(0,0,0,0.5)] justify-between hover:bg-[#222]">
+                        <div class="flex-1 bg-[#1a1a1a] border border-[#151515] rounded-[3px] h-[22px] flex items-center px-2 cursor-pointer shadow-[inset_0_1px_2px_rgba(0,0,0,0.5)] justify-between hover:bg-[#222]" alt-id="Multiple Importance">
                           <span class="text-[13px] text-[#eee]">Multiple Importance</span>
                           <i class="fa-solid fa-chevron-down text-[10px] text-[#888]"></i>
                         </div>
                       </div>
                       <div class="flex items-center gap-2 mt-1">
                         <span class="w-[120px] shrink-0 text-right text-[12px] text-[#ccc] pointer-events-none">Interpolation</span>
-                        <div class="flex-1 bg-[#1a1a1a] border border-[#151515] rounded-[3px] h-[22px] flex items-center px-2 cursor-pointer shadow-[inset_0_1px_2px_rgba(0,0,0,0.5)] justify-between hover:bg-[#222]">
+                        <div class="flex-1 bg-[#1a1a1a] border border-[#151515] rounded-[3px] h-[22px] flex items-center px-2 cursor-pointer shadow-[inset_0_1px_2px_rgba(0,0,0,0.5)] justify-between hover:bg-[#222]" alt-id="Linear">
                           <span class="text-[13px] text-[#eee]">Linear</span>
                           <i class="fa-solid fa-chevron-down text-[10px] text-[#888]"></i>
                         </div>
@@ -7678,7 +7678,7 @@
                   <div class="flex items-center gap-2 mt-1">
                     <span class="w-[120px] shrink-0 text-right text-[12px] text-[#ccc] pointer-events-none"></span>
                     <div class="flex items-center gap-2">
-                      <div class="w-3.5 h-3.5 bg-[#1a1a1a] border border-[#151515] rounded-[2px] flex items-center justify-center cursor-pointer shadow-[inset_0_1px_2px_rgba(0,0,0,0.3)]"></div>
+                      <div class="w-3.5 h-3.5 bg-[#1a1a1a] border border-[#151515] rounded-[2px] flex items-center justify-center cursor-pointer shadow-[inset_0_1px_2px_rgba(0,0,0,0.3)]"></div alt-id="Material Mask">
                       <span class="text-[13px] text-[#eee]">Material Mask</span>
                     </div>
                     <div class="flex-1 flex justify-end">
@@ -7742,7 +7742,7 @@
                 <div class="flex flex-col gap-[3px] p-3 pt-2 bg-[#282828] border-t border-[#1f1f1f] rounded-b-[5px]">
                   <div class="flex items-center gap-2 mt-1">
                     <span class="w-[120px] shrink-0 text-right text-[12px] text-[#ccc] pointer-events-none">Color</span>
-                    <div class="flex-1 bg-[#e0d6cb] border border-[#222] rounded-[3px] h-[22px] shadow-[inset_0_1px_2px_rgba(0,0,0,0.2)] cursor-pointer"></div>
+                    <div class="flex-1 bg-[#e0d6cb] border border-[#222] rounded-[3px] h-[22px] shadow-[inset_0_1px_2px_rgba(0,0,0,0.2)] cursor-pointer"></div alt-id="interactive element 7744">
                     <div class="w-1.5 h-1.5 rounded-full bg-[#999]"></div>
                   </div>
 
@@ -7769,7 +7769,7 @@
 
                   <!-- Nested Settings -->
                   <div class="flex flex-col border-t border-[#1f1f1f] pt-1">
-                    <div class="flex items-center gap-2 py-1 cursor-pointer">
+                    <div class="flex items-center gap-2 py-1 cursor-pointer" alt-id="Settings">
                       <i class="fa-solid fa-chevron-down text-[10px] text-[#aaa] w-3 text-center"></i>
                       <span class="text-[13px] text-[#eee]">Settings</span>
                     </div>
@@ -7778,19 +7778,19 @@
                       <div class="flex items-start gap-2 mt-1">
                         <div class="w-[120px] shrink-0 flex items-center justify-end gap-2">
                           <span class="text-right text-[12px] text-[#ccc] pointer-events-none">Backface Culling</span>
-                          <div class="w-3.5 h-3.5 bg-[#1a1a1a] border border-[#151515] rounded-[2px] flex shrink-0 items-center justify-center cursor-pointer shadow-[inset_0_1px_2px_rgba(0,0,0,0.3)]"></div>
+                          <div class="w-3.5 h-3.5 bg-[#1a1a1a] border border-[#151515] rounded-[2px] flex shrink-0 items-center justify-center cursor-pointer shadow-[inset_0_1px_2px_rgba(0,0,0,0.3)]"></div alt-id="interactive element 7780">
                         </div>
                         <div class="flex flex-col gap-[3px]">
                           <div class="flex items-center gap-2">
-                            <div class="w-3.5 h-3.5 bg-[#1a1a1a] border border-[#151515] rounded-[2px] flex shrink-0 items-center justify-center cursor-pointer shadow-[inset_0_1px_2px_rgba(0,0,0,0.3)]"></div>
+                            <div class="w-3.5 h-3.5 bg-[#1a1a1a] border border-[#151515] rounded-[2px] flex shrink-0 items-center justify-center cursor-pointer shadow-[inset_0_1px_2px_rgba(0,0,0,0.3)]"></div alt-id="Camera">
                             <span class="text-[13px] text-[#eee]">Camera</span>
                           </div>
                           <div class="flex items-center gap-2">
-                            <div class="w-3.5 h-3.5 bg-[#1a1a1a] border border-[#151515] rounded-[2px] flex shrink-0 items-center justify-center cursor-pointer shadow-[inset_0_1px_2px_rgba(0,0,0,0.3)]"></div>
+                            <div class="w-3.5 h-3.5 bg-[#1a1a1a] border border-[#151515] rounded-[2px] flex shrink-0 items-center justify-center cursor-pointer shadow-[inset_0_1px_2px_rgba(0,0,0,0.3)]"></div alt-id="Shadow">
                             <span class="text-[13px] text-[#eee]">Shadow</span>
                           </div>
                           <div class="flex items-center gap-2">
-                            <div class="w-3.5 h-3.5 bg-[#1a1a1a] border border-[#151515] rounded-[2px] flex shrink-0 items-center justify-center cursor-pointer shadow-[inset_0_1px_2px_rgba(0,0,0,0.3)]"></div>
+                            <div class="w-3.5 h-3.5 bg-[#1a1a1a] border border-[#151515] rounded-[2px] flex shrink-0 items-center justify-center cursor-pointer shadow-[inset_0_1px_2px_rgba(0,0,0,0.3)]"></div alt-id="Light Probe Volume">
                             <span class="text-[13px] text-[#eee]">Light Probe Volume</span>
                           </div>
                         </div>
@@ -7807,7 +7807,7 @@
 
                       <div class="flex items-center gap-2 mt-1">
                         <span class="w-[120px] shrink-0 text-right text-[12px] text-[#ccc] pointer-events-none">Render Method</span>
-                        <div class="flex-1 bg-[#1a1a1a] border border-[#151515] rounded-[3px] h-[22px] flex items-center px-2 cursor-pointer shadow-[inset_0_1px_2px_rgba(0,0,0,0.5)] justify-between hover:bg-[#222]">
+                        <div class="flex-1 bg-[#1a1a1a] border border-[#151515] rounded-[3px] h-[22px] flex items-center px-2 cursor-pointer shadow-[inset_0_1px_2px_rgba(0,0,0,0.5)] justify-between hover:bg-[#222]" alt-id="Dithered">
                           <span class="text-[13px] text-[#eee]">Dithered</span>
                           <i class="fa-solid fa-chevron-down text-[10px] text-[#888]"></i>
                         </div>
@@ -7816,14 +7816,14 @@
                       <div class="flex items-center gap-2 mt-1 opacity-50">
                         <span class="w-[120px] shrink-0 text-right text-[12px] text-[#ccc] pointer-events-none"></span>
                         <div class="flex items-center gap-2">
-                          <div class="w-3.5 h-3.5 bg-[#333] border border-[#222] rounded-[2px] flex items-center justify-center cursor-pointer shadow-[inset_0_1px_2px_rgba(0,0,0,0.3)]"></div>
+                          <div class="w-3.5 h-3.5 bg-[#333] border border-[#222] rounded-[2px] flex items-center justify-center cursor-pointer shadow-[inset_0_1px_2px_rgba(0,0,0,0.3)]"></div alt-id="Raytraced Transmission">
                           <span class="text-[13px] text-[#eee]">Raytraced Transmission</span>
                         </div>
                       </div>
 
                       <div class="flex items-center gap-2 mt-1">
                         <span class="w-[120px] shrink-0 text-right text-[12px] text-[#ccc] pointer-events-none">Thickness</span>
-                        <div class="flex-1 bg-[#1a1a1a] border border-[#151515] rounded-[3px] h-[22px] flex items-center px-2 cursor-pointer shadow-[inset_0_1px_2px_rgba(0,0,0,0.5)] justify-between hover:bg-[#222]">
+                        <div class="flex-1 bg-[#1a1a1a] border border-[#151515] rounded-[3px] h-[22px] flex items-center px-2 cursor-pointer shadow-[inset_0_1px_2px_rgba(0,0,0,0.5)] justify-between hover:bg-[#222]" alt-id="Sphere">
                           <span class="text-[13px] text-[#eee]">Sphere</span>
                           <i class="fa-solid fa-chevron-down text-[10px] text-[#888]"></i>
                         </div>
@@ -7832,14 +7832,14 @@
                       <div class="flex items-center gap-2 mt-1 opacity-50">
                         <span class="w-[120px] shrink-0 text-right text-[12px] text-[#ccc] pointer-events-none"></span>
                         <div class="flex items-center gap-2">
-                          <div class="w-3.5 h-3.5 bg-[#333] border border-[#222] rounded-[2px] flex items-center justify-center cursor-pointer shadow-[inset_0_1px_2px_rgba(0,0,0,0.3)]"></div>
+                          <div class="w-3.5 h-3.5 bg-[#333] border border-[#222] rounded-[2px] flex items-center justify-center cursor-pointer shadow-[inset_0_1px_2px_rgba(0,0,0,0.3)]"></div alt-id="From Shadow">
                           <span class="text-[13px] text-[#eee]">From Shadow</span>
                         </div>
                       </div>
 
                       <div class="flex items-center gap-2 mt-1">
                         <span class="w-[120px] shrink-0 text-right text-[12px] text-[#ccc] pointer-events-none">Volume Intersection</span>
-                        <div class="flex-1 bg-[#1a1a1a] border border-[#151515] rounded-[3px] h-[22px] flex items-center px-2 cursor-pointer shadow-[inset_0_1px_2px_rgba(0,0,0,0.5)] justify-between hover:bg-[#222]">
+                        <div class="flex-1 bg-[#1a1a1a] border border-[#151515] rounded-[3px] h-[22px] flex items-center px-2 cursor-pointer shadow-[inset_0_1px_2px_rgba(0,0,0,0.5)] justify-between hover:bg-[#222]" alt-id="Fast">
                           <span class="text-[13px] text-[#eee]">Fast</span>
                           <i class="fa-solid fa-chevron-down text-[10px] text-[#888]"></i>
                         </div>
@@ -7867,7 +7867,7 @@
               {#if isMaterialCustomPropertiesExpanded}
                 <div class="flex flex-col gap-[3px] p-3 pt-2 bg-[#282828] border-t border-[#1f1f1f] rounded-b-[5px]">
                   <div class="flex">
-                    <div class="flex-1 h-[24px] bg-[#4d4d4d] border border-[#222] rounded-[3px] flex items-center justify-center cursor-pointer shadow-sm hover:bg-[#5a5a5a] gap-2">
+                    <div class="flex-1 h-[24px] bg-[#4d4d4d] border border-[#222] rounded-[3px] flex items-center justify-center cursor-pointer shadow-sm hover:bg-[#5a5a5a] gap-2" alt-id="New">
                       <span class="text-[13px] text-[#eee]">New</span>
                     </div>
                   </div>
