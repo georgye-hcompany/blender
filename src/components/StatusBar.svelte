@@ -1,15 +1,15 @@
 <script>
 </script>
 
-<div class="h-6 bg-[#202020] border-t border-[#151515] flex items-center px-2 justify-between text-[10px] text-[#a0a0a0] select-none" alt-id="Main application status bar">
+<div class="h-6 bg-[#202020] border-t border-[#151515] flex items-center px-2 justify-between text-[10px] text-[#a0a0a0] select-none" alt-id="Main application status bar" appearance-id="dark 24px tall horizontal bar with small gray text at bottom of screen" location-id="bottom of the Blender application window, below all editor panels" functionality-id="displays context-sensitive shortcut hints and scene/memory statistics" intent-id="provide at-a-glance information about current context and system resources">
   <div class="flex items-center gap-4">
-    <div class="flex items-center gap-1 cursor-pointer hover:text-white" alt-id="Left click action info: Select"><i class="fa-light fa-mouse-pointer pointer-events-none"></i> <span class="pointer-events-none">Select</span></div>
-    <div class="flex items-center gap-1 cursor-pointer hover:text-white" alt-id="Drag action info: Box Select"><i class="fa-light fa-arrows-maximize pointer-events-none"></i> <span class="pointer-events-none">Box Select</span></div>
-    <div class="flex items-center gap-1 cursor-pointer hover:text-white" alt-id="Right click action info: Object Context Menu"><i class="fa-light fa-mouse-pointer transform scale-x-[-1] pointer-events-none"></i> <span class="pointer-events-none">Object Context Menu</span></div>
+    <div class="flex items-center gap-1 cursor-pointer hover:text-white" alt-id="Left click action info: Select" appearance-id="left-pointing mouse pointer icon followed by the text Select" location-id="leftmost item in the status bar shortcut hints area" functionality-id="shows that left-clicking selects objects in the active viewport" intent-id="remind the user what a left click does in the current editor mode"><i class="fa-light fa-mouse-pointer pointer-events-none"></i> <span class="pointer-events-none">Select</span></div>
+    <div class="flex items-center gap-1 cursor-pointer hover:text-white" alt-id="Drag action info: Box Select" appearance-id="expand arrows icon followed by the text Box Select" location-id="second item from the left in the status bar shortcut hints area" functionality-id="shows that click-dragging performs a box selection in the active viewport" intent-id="remind the user how to box-select multiple objects"><i class="fa-light fa-arrows-maximize pointer-events-none"></i> <span class="pointer-events-none">Box Select</span></div>
+    <div class="flex items-center gap-1 cursor-pointer hover:text-white" alt-id="Right click action info: Object Context Menu" appearance-id="right-pointing mouse pointer icon followed by the text Object Context Menu" location-id="third item from the left in the status bar shortcut hints area" functionality-id="shows that right-clicking opens the object context menu" intent-id="remind the user how to access the context menu for selected objects"><i class="fa-light fa-mouse-pointer transform scale-x-[-1] pointer-events-none"></i> <span class="pointer-events-none">Object Context Menu</span></div>
   </div>
   <div class="flex items-center gap-4">
-    <div alt-id="Scene statistics: Collection, Camera, Light, Cube.019">Collection | Camera | Light | Cube.019</div>
-    <div alt-id="Memory usage statistics">Mem: 42.1 MB</div>
-    <div alt-id="Blender version string">3.2.1</div>
+    <div alt-id="Scene statistics: Collection, Camera, Light, Cube.019" appearance-id="small gray text listing active objects separated by pipe characters" location-id="right side of the status bar, leftmost of the statistics group" functionality-id="displays the names of objects in the current collection" intent-id="identify which scene objects are present in the active collection">Collection | Camera | Light | Cube.019</div>
+    <div alt-id="Memory usage statistics" appearance-id="small gray text showing memory amount in megabytes" location-id="right side of the status bar, second from the right" functionality-id="displays the current RAM usage of the Blender session" intent-id="monitor system memory consumption during the editing session">Mem: 42.1 MB</div>
+    <div alt-id="Blender version string" appearance-id="small gray text showing the Blender version number" location-id="rightmost item in the status bar" functionality-id="displays the current Blender version number" intent-id="identify the Blender version being used">3.2.1</div>
   </div>
 </div>
