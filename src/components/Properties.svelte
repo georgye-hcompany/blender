@@ -3009,16 +3009,16 @@
                     <span class="w-[120px] shrink-0 text-right text-[12px] text-[#ccc] pointer-events-none">Line Thickness Mode</span>
                     <div class="flex-1 flex bg-[#3d3d3d] border border-[#222] rounded-[3px] shadow-[inset_0_1px_2px_rgba(0,0,0,0.2)] overflow-hidden h-[22px]">
                       <div 
-                        class="flex-1 flex items-center justify-center cursor-pointer {isFreestyleLineThicknessModeAbsolute ? 'bg-[#4772b3] border-r border-[#333]' : 'hover:bg-[#4d4d4d]'}" alt-id="Freestyle Line Thickness Mode: Absolute"
-                        on:click={() = alt-id="Absolute"> setFreestyleLineThicknessMode(true)}
-                        alt-id="Freestyle Line Thickness Mode Absolute; {isFreestyleLineThicknessModeAbsolute ? 'selected' : 'unselected'}"
+                        class="flex-1 flex items-center justify-center cursor-pointer {isFreestyleLineThicknessModeAbsolute ? 'bg-[#4772b3] border-r border-[#333]' : 'hover:bg-[#4d4d4d]'}"
+                        on:click={() => setFreestyleLineThicknessMode(true)}
+                        alt-id="Freestyle Line Thickness Mode: Absolute; {isFreestyleLineThicknessModeAbsolute ? 'selected' : 'unselected'}"
                       >
                         <span class="text-[13px] {isFreestyleLineThicknessModeAbsolute ? 'text-white' : 'text-[#ccc]'} pointer-events-none">Absolute</span>
                       </div>
                       <div 
-                        class="flex-1 flex items-center justify-center cursor-pointer {!isFreestyleLineThicknessModeAbsolute ? 'bg-[#4772b3] border-l border-[#333]' : 'hover:bg-[#4d4d4d]'}" alt-id="Freestyle Line Thickness Mode: Relative"
-                        on:click={() = alt-id="Relative"> setFreestyleLineThicknessMode(false)}
-                        alt-id="Freestyle Line Thickness Mode Relative; {!isFreestyleLineThicknessModeAbsolute ? 'selected' : 'unselected'}"
+                        class="flex-1 flex items-center justify-center cursor-pointer {!isFreestyleLineThicknessModeAbsolute ? 'bg-[#4772b3] border-l border-[#333]' : 'hover:bg-[#4d4d4d]'}"
+                        on:click={() => setFreestyleLineThicknessMode(false)}
+                        alt-id="Freestyle Line Thickness Mode: Relative; {!isFreestyleLineThicknessModeAbsolute ? 'selected' : 'unselected'}"
                       >
                         <span class="text-[13px] {!isFreestyleLineThicknessModeAbsolute ? 'text-white' : 'text-[#ccc]'} pointer-events-none">Relative</span>
                       </div>
@@ -3384,16 +3384,16 @@
                 <div class="flex flex-col gap-2 p-3 pt-2 bg-[#282828] border-t border-[#1f1f1f] rounded-b-[5px]">
                   <div class="flex-1 flex bg-[#3d3d3d] border border-[#222] rounded-[3px] shadow-[inset_0_1px_2px_rgba(0,0,0,0.2)] overflow-hidden h-[22px]">
                     <div 
-                      class="flex-1 flex items-center justify-center cursor-pointer {isStereoscopyStereo3D ? 'bg-[#4772b3] border-r border-[#333]' : 'hover:bg-[#4d4d4d]'}" alt-id="Stereoscopy Mode: Stereo 3D"
-                      on:click={() = alt-id="Stereo 3D"> setStereoscopyStereo3D(true)}
-                      alt-id="Stereo 3D / Multi-View toggle; Stereo 3D {isStereoscopyStereo3D ? 'selected' : 'unselected'}"
+                      class="flex-1 flex items-center justify-center cursor-pointer {isStereoscopyStereo3D ? 'bg-[#4772b3] border-r border-[#333]' : 'hover:bg-[#4d4d4d]'}"
+                      on:click={() => setStereoscopyStereo3D(true)}
+                      alt-id="Stereoscopy Mode: Stereo 3D; {isStereoscopyStereo3D ? 'selected' : 'unselected'}"
                     >
                       <span class="text-[13px] {isStereoscopyStereo3D ? 'text-white' : 'text-[#ccc]'} pointer-events-none">Stereo 3D</span>
                     </div>
                     <div 
-                      class="flex-1 flex items-center justify-center cursor-pointer {!isStereoscopyStereo3D ? 'bg-[#4772b3] border-l border-[#333]' : 'hover:bg-[#4d4d4d]'}" alt-id="Stereoscopy Mode: Multi-View"
-                      on:click={() = alt-id="Multi-View"> setStereoscopyStereo3D(false)}
-                      alt-id="Stereo 3D / Multi-View toggle; Multi-View {!isStereoscopyStereo3D ? 'selected' : 'unselected'}"
+                      class="flex-1 flex items-center justify-center cursor-pointer {!isStereoscopyStereo3D ? 'bg-[#4772b3] border-l border-[#333]' : 'hover:bg-[#4d4d4d]'}"
+                      on:click={() => setStereoscopyStereo3D(false)}
+                      alt-id="Stereoscopy Mode: Multi-View; {!isStereoscopyStereo3D ? 'selected' : 'unselected'}"
                     >
                       <span class="text-[13px] {!isStereoscopyStereo3D ? 'text-white' : 'text-[#ccc]'} pointer-events-none">Multi-View</span>
                     </div>
@@ -7678,7 +7678,7 @@
                   <div class="flex items-center gap-2 mt-1">
                     <span class="w-[120px] shrink-0 text-right text-[12px] text-[#ccc] pointer-events-none"></span>
                     <div class="flex items-center gap-2">
-                      <div class="w-3.5 h-3.5 bg-[#1a1a1a] border border-[#151515] rounded-[2px] flex items-center justify-center cursor-pointer shadow-[inset_0_1px_2px_rgba(0,0,0,0.3)]"></div alt-id="Material Mask">
+                      <div class="w-3.5 h-3.5 bg-[#1a1a1a] border border-[#151515] rounded-[2px] flex items-center justify-center cursor-pointer shadow-[inset_0_1px_2px_rgba(0,0,0,0.3)]" alt-id="Material Mask"></div>
                       <span class="text-[13px] text-[#eee]">Material Mask</span>
                     </div>
                     <div class="flex-1 flex justify-end">
@@ -7742,7 +7742,7 @@
                 <div class="flex flex-col gap-[3px] p-3 pt-2 bg-[#282828] border-t border-[#1f1f1f] rounded-b-[5px]">
                   <div class="flex items-center gap-2 mt-1">
                     <span class="w-[120px] shrink-0 text-right text-[12px] text-[#ccc] pointer-events-none">Color</span>
-                    <div class="flex-1 bg-[#e0d6cb] border border-[#222] rounded-[3px] h-[22px] shadow-[inset_0_1px_2px_rgba(0,0,0,0.2)] cursor-pointer"></div alt-id="interactive element 7744">
+                    <div class="flex-1 bg-[#e0d6cb] border border-[#222] rounded-[3px] h-[22px] shadow-[inset_0_1px_2px_rgba(0,0,0,0.2)] cursor-pointer" alt-id="interactive element 7744"></div>
                     <div class="w-1.5 h-1.5 rounded-full bg-[#999]"></div>
                   </div>
 
@@ -7778,19 +7778,19 @@
                       <div class="flex items-start gap-2 mt-1">
                         <div class="w-[120px] shrink-0 flex items-center justify-end gap-2">
                           <span class="text-right text-[12px] text-[#ccc] pointer-events-none">Backface Culling</span>
-                          <div class="w-3.5 h-3.5 bg-[#1a1a1a] border border-[#151515] rounded-[2px] flex shrink-0 items-center justify-center cursor-pointer shadow-[inset_0_1px_2px_rgba(0,0,0,0.3)]"></div alt-id="interactive element 7780">
+                          <div class="w-3.5 h-3.5 bg-[#1a1a1a] border border-[#151515] rounded-[2px] flex shrink-0 items-center justify-center cursor-pointer shadow-[inset_0_1px_2px_rgba(0,0,0,0.3)]" alt-id="interactive element 7780"></div>
                         </div>
                         <div class="flex flex-col gap-[3px]">
                           <div class="flex items-center gap-2">
-                            <div class="w-3.5 h-3.5 bg-[#1a1a1a] border border-[#151515] rounded-[2px] flex shrink-0 items-center justify-center cursor-pointer shadow-[inset_0_1px_2px_rgba(0,0,0,0.3)]"></div alt-id="Camera">
+                            <div class="w-3.5 h-3.5 bg-[#1a1a1a] border border-[#151515] rounded-[2px] flex shrink-0 items-center justify-center cursor-pointer shadow-[inset_0_1px_2px_rgba(0,0,0,0.3)]" alt-id="Camera"></div>
                             <span class="text-[13px] text-[#eee]">Camera</span>
                           </div>
                           <div class="flex items-center gap-2">
-                            <div class="w-3.5 h-3.5 bg-[#1a1a1a] border border-[#151515] rounded-[2px] flex shrink-0 items-center justify-center cursor-pointer shadow-[inset_0_1px_2px_rgba(0,0,0,0.3)]"></div alt-id="Shadow">
+                            <div class="w-3.5 h-3.5 bg-[#1a1a1a] border border-[#151515] rounded-[2px] flex shrink-0 items-center justify-center cursor-pointer shadow-[inset_0_1px_2px_rgba(0,0,0,0.3)]" alt-id="Shadow"></div>
                             <span class="text-[13px] text-[#eee]">Shadow</span>
                           </div>
                           <div class="flex items-center gap-2">
-                            <div class="w-3.5 h-3.5 bg-[#1a1a1a] border border-[#151515] rounded-[2px] flex shrink-0 items-center justify-center cursor-pointer shadow-[inset_0_1px_2px_rgba(0,0,0,0.3)]"></div alt-id="Light Probe Volume">
+                            <div class="w-3.5 h-3.5 bg-[#1a1a1a] border border-[#151515] rounded-[2px] flex shrink-0 items-center justify-center cursor-pointer shadow-[inset_0_1px_2px_rgba(0,0,0,0.3)]" alt-id="Light Probe Volume"></div>
                             <span class="text-[13px] text-[#eee]">Light Probe Volume</span>
                           </div>
                         </div>
@@ -7816,7 +7816,7 @@
                       <div class="flex items-center gap-2 mt-1 opacity-50">
                         <span class="w-[120px] shrink-0 text-right text-[12px] text-[#ccc] pointer-events-none"></span>
                         <div class="flex items-center gap-2">
-                          <div class="w-3.5 h-3.5 bg-[#333] border border-[#222] rounded-[2px] flex items-center justify-center cursor-pointer shadow-[inset_0_1px_2px_rgba(0,0,0,0.3)]"></div alt-id="Raytraced Transmission">
+                          <div class="w-3.5 h-3.5 bg-[#333] border border-[#222] rounded-[2px] flex items-center justify-center cursor-pointer shadow-[inset_0_1px_2px_rgba(0,0,0,0.3)]" alt-id="Raytraced Transmission"></div>
                           <span class="text-[13px] text-[#eee]">Raytraced Transmission</span>
                         </div>
                       </div>
@@ -7832,7 +7832,7 @@
                       <div class="flex items-center gap-2 mt-1 opacity-50">
                         <span class="w-[120px] shrink-0 text-right text-[12px] text-[#ccc] pointer-events-none"></span>
                         <div class="flex items-center gap-2">
-                          <div class="w-3.5 h-3.5 bg-[#333] border border-[#222] rounded-[2px] flex items-center justify-center cursor-pointer shadow-[inset_0_1px_2px_rgba(0,0,0,0.3)]"></div alt-id="From Shadow">
+                          <div class="w-3.5 h-3.5 bg-[#333] border border-[#222] rounded-[2px] flex items-center justify-center cursor-pointer shadow-[inset_0_1px_2px_rgba(0,0,0,0.3)]" alt-id="From Shadow"></div>
                           <span class="text-[13px] text-[#eee]">From Shadow</span>
                         </div>
                       </div>

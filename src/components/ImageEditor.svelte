@@ -192,9 +192,9 @@
           <div class="absolute left-0 top-[26px] bg-[#1d1d1d] text-[#cccccc] text-[13px] py-1.5 shadow-[2px_2px_10px_rgba(0,0,0,0.5)] border border-[#333] z-50 w-[180px] rounded-[3px] flex flex-col cursor-default" on:click|stopPropagation alt-id="Image Editor main menu dropdown">
             
             <!-- View Menu Item -->
-            <div class="flex items-center justify-between px-3 py-1 hover:bg-[#4772b3] hover:text-white cursor-pointer {isMenuViewOpen ? 'bg-[#4d4d4d] text-white' : ''} group relative" alt-id="View menu toggle item" 
+            <div class="flex items-center justify-between px-3 py-1 hover:bg-[#4772b3] hover:text-white cursor-pointer {isMenuViewOpen ? 'bg-[#4d4d4d] text-white' : ''} group relative" 
                  on:mouseenter={() => { isMenuViewOpen = true; isMenuImageOpen = false; updateOpenParam(); }}
-                 alt-id="View menu item">
+                 alt-id="View menu toggle item; View menu item">
               <span class="pointer-events-none ml-1"><u class="underline-offset-2 decoration-1">V</u>iew</span>
               <i class="fa-solid fa-caret-right text-[10px] {isMenuViewOpen ? 'text-white' : 'text-[#a0a0a0] group-hover:text-white'} pointer-events-none"></i>
               
@@ -292,9 +292,9 @@
             </div>
             
             <!-- Image Menu Item -->
-            <div class="flex items-center justify-between px-3 py-1 hover:bg-[#4772b3] hover:text-white cursor-pointer {isMenuImageOpen ? 'bg-[#4d4d4d] text-white' : ''} group relative" alt-id="Image menu toggle item" 
+            <div class="flex items-center justify-between px-3 py-1 hover:bg-[#4772b3] hover:text-white cursor-pointer {isMenuImageOpen ? 'bg-[#4d4d4d] text-white' : ''} group relative" 
                  on:mouseenter={() => { isMenuImageOpen = true; isMenuViewOpen = false; updateOpenParam(); }}
-                 alt-id="Image menu item">
+                 alt-id="Image menu toggle item; Image menu item">
               <span class="pointer-events-none ml-1"><u class="underline-offset-2 decoration-1">I</u>mage</span>
               <i class="fa-solid fa-caret-right text-[10px] {isMenuImageOpen ? 'text-white' : 'text-[#a0a0a0] group-hover:text-white'} pointer-events-none"></i>
               

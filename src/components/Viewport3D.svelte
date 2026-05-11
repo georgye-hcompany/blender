@@ -2043,6 +2043,285 @@
               {/each}
             </div>
           </div>
+
+
+
+
+        {:else if interactionMode === 'texture_paint'}
+          <!-- Texture Paint Mode Toolbar -->
+          <div class="flex flex-col bg-[#282828] bg-opacity-95 rounded-[4px] shadow-md border border-[#1f1f1f] w-full pb-1 mb-4" alt-id="Texture Paint Mode Tools">
+            <div class="flex flex-col mb-2">
+              {#each [
+                { name: 'Brush', icon: 'fa-paintbrush', active: true, hasTriangle: false, extraHTML: '<div class="w-4 h-[2px] bg-[#888] rounded-full mt-0.5 pointer-events-none transform -rotate-12 opacity-80"></div>' },
+                { name: 'Blur', icon: 'fa-droplet', active: false, hasTriangle: false, extraHTML: '<div class="w-4 h-[2px] bg-[#888] rounded-full mt-0.5 pointer-events-none transform -rotate-12 opacity-80"></div>' },
+                { name: 'Smear', icon: 'fa-hand-pointer', active: false, hasTriangle: false, extraHTML: '<div class="w-4 h-[2px] bg-[#888] rounded-full mt-0.5 pointer-events-none transform -rotate-12 opacity-80"></div>' },
+                { name: 'Clone', icon: 'fa-stamp', active: false, hasTriangle: false, extraHTML: '<div class="w-4 h-[2px] bg-[#888] rounded-full mt-0.5 pointer-events-none transform -rotate-12 opacity-80"></div>' },
+                { name: 'Fill', icon: 'fa-fill-drip', active: false, hasTriangle: false, extraHTML: '' },
+                { name: 'Mask', icon: 'fa-clone', active: false, hasTriangle: false, extraHTML: '<div class="absolute bottom-1 right-1 w-2 h-2 bg-white rounded-tl-[1px] transform -rotate-45 pointer-events-none"></div>' }
+              ] as tool}
+                <div class="w-full h-[36px] {tool.active ? 'bg-[#4772b3] text-white' : 'text-[#ccc] hover:bg-[#333] hover:text-white'} flex items-center cursor-pointer relative" alt-id="{tool.name} tool">
+                  <div class="w-[50px] h-[36px] flex flex-col items-center justify-center shrink-0 relative">
+                    {#if tool.icon}
+                      <i class="fa-solid {tool.icon} text-[16px] pointer-events-none"></i>
+                    {/if}
+                    {#if tool.extraHTML}{@html tool.extraHTML}{/if}
+                  </div>
+                  {#if isLeftToolbarExpanded}
+                    <span class="text-[12px] whitespace-nowrap ml-2 pointer-events-none">{tool.name}</span>
+                  {/if}
+                  {#if tool.hasTriangle}
+                    <div class="absolute bottom-[2px] right-[2px] w-0 h-0 border-l-[4px] border-l-transparent border-b-[4px] border-b-[#888] pointer-events-none"></div>
+                  {/if}
+                </div>
+              {/each}
+            </div>
+
+            <div class="w-10/12 h-[1px] bg-[#1f1f1f] mx-auto my-1"></div>
+
+            <div class="flex flex-col mb-2">
+              <div class="w-full h-[36px] text-[#ccc] hover:bg-[#333] hover:text-white flex items-center cursor-pointer relative" alt-id="Annotate tool">
+                <div class="w-[50px] h-[36px] flex items-center justify-center shrink-0">
+                  <div class="relative flex flex-col items-center">
+                    <i class="fa-solid fa-pen text-[12px] transform rotate-45 -translate-y-0.5 pointer-events-none"></i>
+                    <div class="w-4 h-[2px] bg-[#66cc99] rounded-full mt-0.5 pointer-events-none"></div>
+                  </div>
+                </div>
+                {#if isLeftToolbarExpanded}
+                  <span class="text-[12px] whitespace-nowrap ml-2 pointer-events-none">Annotate</span>
+                {/if}
+                <div class="absolute bottom-[2px] right-[2px] w-0 h-0 border-l-[4px] border-l-transparent border-b-[4px] border-b-[#888] pointer-events-none"></div>
+              </div>
+            </div>
+          </div>
+
+        {:else if interactionMode === 'weight_paint'}
+          <!-- Weight Paint Mode Toolbar -->
+          <div class="flex flex-col bg-[#282828] bg-opacity-95 rounded-[4px] shadow-md border border-[#1f1f1f] w-full pb-1 mb-4" alt-id="Weight Paint Mode Tools">
+            <div class="flex flex-col mb-2">
+              {#each [
+                { name: 'Brush', icon: 'fa-paintbrush', active: true, hasTriangle: false, extraHTML: '<div class="w-4 h-[2px] bg-[#888] rounded-full mt-0.5 pointer-events-none transform -rotate-12 opacity-80"></div>' },
+                { name: 'Blur', icon: 'fa-droplet', active: false, hasTriangle: false, extraHTML: '<div class="w-4 h-[2px] bg-[#888] rounded-full mt-0.5 pointer-events-none transform -rotate-12 opacity-80"></div>' },
+                { name: 'Average', icon: 'fa-sun', active: false, hasTriangle: false, extraHTML: '' },
+                { name: 'Smear', icon: 'fa-hand-pointer', active: false, hasTriangle: false, extraHTML: '<div class="w-4 h-[2px] bg-[#888] rounded-full mt-0.5 pointer-events-none transform -rotate-12 opacity-80"></div>' },
+                { name: 'Gradient', icon: '', active: false, hasTriangle: false, extraHTML: '<div class="w-4 h-1 bg-gradient-to-r from-[#ccc] to-transparent transform -rotate-45 pointer-events-none border border-[#888] rounded-full relative mt-1"><div class="absolute -left-[3px] -bottom-[3px] w-1.5 h-1.5 rounded-full bg-[#ccc]"></div><div class="absolute -right-[3px] -top-[3px] w-1.5 h-1.5 rounded-full bg-[#ccc]"></div></div>' },
+                { name: 'Sample Weight', icon: 'fa-eye-dropper', active: false, hasTriangle: true, extraHTML: '<div class="w-4 h-[2px] bg-[#888] rounded-full mt-0.5 pointer-events-none transform -rotate-12 opacity-80"></div>' }
+              ] as tool}
+                <div class="w-full h-[36px] {tool.active ? 'bg-[#4772b3] text-white' : 'text-[#ccc] hover:bg-[#333] hover:text-white'} flex items-center cursor-pointer relative" alt-id="{tool.name} tool">
+                  <div class="w-[50px] h-[36px] flex flex-col items-center justify-center shrink-0">
+                    {#if tool.icon}
+                      <i class="fa-solid {tool.icon} text-[16px] pointer-events-none"></i>
+                    {/if}
+                    {#if tool.extraHTML}{@html tool.extraHTML}{/if}
+                  </div>
+                  {#if isLeftToolbarExpanded}
+                    <span class="text-[12px] whitespace-nowrap ml-2 pointer-events-none">{tool.name}</span>
+                  {/if}
+                  {#if tool.hasTriangle}
+                    <div class="absolute bottom-[2px] right-[2px] w-0 h-0 border-l-[4px] border-l-transparent border-b-[4px] border-b-[#888] pointer-events-none"></div>
+                  {/if}
+                </div>
+              {/each}
+            </div>
+
+            <div class="w-10/12 h-[1px] bg-[#1f1f1f] mx-auto my-1"></div>
+
+            <div class="flex flex-col mb-2">
+              <div class="w-full h-[36px] text-[#ccc] hover:bg-[#333] hover:text-white flex items-center cursor-pointer relative" alt-id="Annotate tool">
+                <div class="w-[50px] h-[36px] flex items-center justify-center shrink-0">
+                  <div class="relative flex flex-col items-center">
+                    <i class="fa-solid fa-pen text-[12px] transform rotate-45 -translate-y-0.5 pointer-events-none"></i>
+                    <div class="w-4 h-[2px] bg-[#66cc99] rounded-full mt-0.5 pointer-events-none"></div>
+                  </div>
+                </div>
+                {#if isLeftToolbarExpanded}
+                  <span class="text-[12px] whitespace-nowrap ml-2 pointer-events-none">Annotate</span>
+                {/if}
+                <div class="absolute bottom-[2px] right-[2px] w-0 h-0 border-l-[4px] border-l-transparent border-b-[4px] border-b-[#888] pointer-events-none"></div>
+              </div>
+            </div>
+          </div>
+
+        {:else if interactionMode === 'vertex_paint'}
+          <!-- Vertex Paint Mode Toolbar -->
+          <div class="flex flex-col bg-[#282828] bg-opacity-95 rounded-[4px] shadow-md border border-[#1f1f1f] w-full pb-1 mb-4" alt-id="Vertex Paint Mode Tools">
+            <div class="flex flex-col mb-2">
+              {#each [
+                { name: 'Brush', icon: 'fa-paintbrush', active: true, hasTriangle: false, extraHTML: '<div class="w-4 h-[2px] bg-[#888] rounded-full mt-0.5 pointer-events-none transform -rotate-12 opacity-80"></div>' },
+                { name: 'Blur', icon: 'fa-droplet', active: false, hasTriangle: false, extraHTML: '' },
+                { name: 'Average', icon: 'fa-sun', active: false, hasTriangle: false, extraHTML: '' },
+                { name: 'Smear', icon: 'fa-hand-pointer', active: false, hasTriangle: false, extraHTML: '<div class="w-4 h-[2px] bg-[#888] rounded-full mt-0.5 pointer-events-none transform -rotate-12 opacity-80"></div>' }
+              ] as tool}
+                <div class="w-full h-[36px] {tool.active ? 'bg-[#4772b3] text-white' : 'text-[#ccc] hover:bg-[#333] hover:text-white'} flex items-center cursor-pointer relative" alt-id="{tool.name} tool">
+                  <div class="w-[50px] h-[36px] flex flex-col items-center justify-center shrink-0">
+                    <i class="fa-solid {tool.icon} text-[16px] pointer-events-none"></i>
+                    {#if tool.extraHTML}{@html tool.extraHTML}{/if}
+                  </div>
+                  {#if isLeftToolbarExpanded}
+                    <span class="text-[12px] whitespace-nowrap ml-2 pointer-events-none">{tool.name}</span>
+                  {/if}
+                  {#if tool.hasTriangle}
+                    <div class="absolute bottom-[2px] right-[2px] w-0 h-0 border-l-[4px] border-l-transparent border-b-[4px] border-b-[#888] pointer-events-none"></div>
+                  {/if}
+                </div>
+              {/each}
+            </div>
+
+            <div class="w-10/12 h-[1px] bg-[#1f1f1f] mx-auto my-1"></div>
+
+            <div class="flex flex-col mb-2">
+              <div class="w-full h-[36px] text-[#ccc] hover:bg-[#333] hover:text-white flex items-center cursor-pointer relative" alt-id="Annotate tool">
+                <div class="w-[50px] h-[36px] flex items-center justify-center shrink-0">
+                  <div class="relative flex flex-col items-center">
+                    <i class="fa-solid fa-pen text-[12px] transform rotate-45 -translate-y-0.5 pointer-events-none"></i>
+                    <div class="w-4 h-[2px] bg-[#66cc99] rounded-full mt-0.5 pointer-events-none"></div>
+                  </div>
+                </div>
+                {#if isLeftToolbarExpanded}
+                  <span class="text-[12px] whitespace-nowrap ml-2 pointer-events-none">Annotate</span>
+                {/if}
+                <div class="absolute bottom-[2px] right-[2px] w-0 h-0 border-l-[4px] border-l-transparent border-b-[4px] border-b-[#888] pointer-events-none"></div>
+              </div>
+            </div>
+          </div>
+
+        {:else if interactionMode === 'edit'}
+          <!-- Edit Mode Toolbar -->
+          <div class="flex flex-col bg-[#282828] bg-opacity-95 rounded-[4px] shadow-md border border-[#1f1f1f] w-full pb-1 mb-4" alt-id="Edit Mode Tools">
+            
+            <div class="flex flex-col mb-2">
+              {#each [
+                { name: 'Select Box', icon: 'fa-arrow-pointer', borderStyle: 'border-dashed border-[#ffcc00]', extraHTML: '' },
+                { name: 'Cursor', icon: 'fa-crosshairs', extraHTML: '' }
+              ] as tool}
+                <div class="w-full h-[36px] {tool.name === 'Select Box' ? 'bg-[#4772b3] text-white' : 'text-[#ccc] hover:bg-[#333] hover:text-white'} flex items-center cursor-pointer relative" alt-id="{tool.name} tool">
+                  <div class="w-[50px] h-[36px] flex items-center justify-center shrink-0">
+                    {#if tool.borderStyle}
+                      <div class="relative w-5 h-5 flex items-center justify-center border-[1.5px] {tool.borderStyle} opacity-90">
+                        <i class="fa-solid {tool.icon} text-[10px] text-white shadow-sm transform -translate-x-0.5"></i>
+                      </div>
+                    {:else}
+                      <i class="fa-solid {tool.icon} text-[16px]"></i>
+                    {/if}
+                  </div>
+                  {#if isLeftToolbarExpanded}
+                    <span class="text-[12px] whitespace-nowrap ml-2 pointer-events-none">{tool.name}</span>
+                  {/if}
+                  {#if tool.name === 'Select Box'}
+                    <div class="absolute bottom-[2px] right-[2px] w-0 h-0 border-l-[4px] border-l-transparent border-b-[4px] border-b-white/80 pointer-events-none"></div>
+                  {/if}
+                </div>
+              {/each}
+            </div>
+
+            <div class="w-10/12 h-[1px] bg-[#1f1f1f] mx-auto my-1"></div>
+
+            <div class="flex flex-col mb-2">
+              {#each [
+                { name: 'Move', icon: 'fa-arrows-up-down-left-right' },
+                { name: 'Rotate', icon: 'fa-rotate' },
+                { name: 'Scale', icon: 'fa-square', extraHTML: '<i class="fa-solid fa-arrow-up-right text-[8px] absolute top-[-3px] right-[-5px]"></i>' },
+                { name: 'Transform', icon: 'fa-arrows-up-down-left-right', extraHTML: '<div class="absolute w-2 h-2 bg-[#ccc] rounded-full border-[1.5px] border-[#282828]"></div>' }
+              ] as tool}
+                <div class="w-full h-[36px] text-[#ccc] hover:bg-[#333] hover:text-white flex items-center cursor-pointer relative" alt-id="{tool.name} tool">
+                  <div class="w-[50px] h-[36px] flex items-center justify-center shrink-0">
+                    <div class="relative flex items-center justify-center">
+                      <i class="fa-solid {tool.icon} text-[16px] {tool.name === 'Transform' ? 'opacity-70' : ''}"></i>
+                      {#if tool.extraHTML}{@html tool.extraHTML}{/if}
+                    </div>
+                  </div>
+                  {#if isLeftToolbarExpanded}
+                    <span class="text-[12px] whitespace-nowrap ml-2 pointer-events-none">{tool.name}</span>
+                  {/if}
+                  {#if tool.name === 'Scale' || tool.name === 'Transform'}
+                    <div class="absolute bottom-[2px] right-[2px] w-0 h-0 border-l-[4px] border-l-transparent border-b-[4px] border-b-[#888] pointer-events-none"></div>
+                  {/if}
+                </div>
+              {/each}
+            </div>
+
+            <div class="w-10/12 h-[1px] bg-[#1f1f1f] mx-auto my-1"></div>
+
+            <div class="flex flex-col mb-2">
+              {#each [
+                { name: 'Annotate', icon: 'fa-pen', extraHTML: '<div class="w-4 h-[2px] bg-[#66cc99] rounded-full mt-0.5"></div>' },
+                { name: 'Measure', icon: 'fa-ruler-vertical', extraHTML: '<i class="fa-solid fa-ruler-horizontal text-[14px]"></i>' }
+              ] as tool}
+                <div class="w-full h-[36px] text-[#ccc] hover:bg-[#333] hover:text-white flex items-center cursor-pointer relative" alt-id="{tool.name} tool">
+                  <div class="w-[50px] h-[36px] flex items-center justify-center shrink-0">
+                    {#if tool.name === 'Annotate'}
+                      <div class="relative flex flex-col items-center">
+                        <i class="fa-solid {tool.icon} text-[12px] transform rotate-45 -translate-y-0.5"></i>
+                        {@html tool.extraHTML}
+                      </div>
+                    {:else}
+                      <div class="flex items-end">
+                        <i class="fa-solid {tool.icon} text-[14px]"></i>
+                        {@html tool.extraHTML}
+                      </div>
+                    {/if}
+                  </div>
+                  {#if isLeftToolbarExpanded}
+                    <span class="text-[12px] whitespace-nowrap ml-2 pointer-events-none">{tool.name}</span>
+                  {/if}
+                  {#if tool.name === 'Annotate'}
+                    <div class="absolute bottom-[2px] right-[2px] w-0 h-0 border-l-[4px] border-l-transparent border-b-[4px] border-b-[#888] pointer-events-none"></div>
+                  {/if}
+                </div>
+              {/each}
+            </div>
+
+            <div class="w-10/12 h-[1px] bg-[#1f1f1f] mx-auto my-1"></div>
+
+            <div class="flex flex-col mb-2">
+              {#each [
+                { name: 'Add Cube', icon: 'fa-cube', extraHTML: '<div class="absolute top-[5px] left-[5px] text-[#66cc99] font-bold text-[10px] leading-none">+</div>' }
+              ] as tool}
+                <div class="w-full h-[36px] text-[#ccc] hover:bg-[#333] hover:text-white flex items-center cursor-pointer relative" alt-id="{tool.name} tool">
+                  <div class="w-[50px] h-[36px] flex items-center justify-center shrink-0 relative">
+                    <i class="fa-regular {tool.icon} text-[16px]"></i>
+                    {@html tool.extraHTML}
+                  </div>
+                  {#if isLeftToolbarExpanded}
+                    <span class="text-[12px] whitespace-nowrap ml-2 pointer-events-none">{tool.name}</span>
+                  {/if}
+                  <div class="absolute bottom-[2px] right-[2px] w-0 h-0 border-l-[4px] border-l-transparent border-b-[4px] border-b-[#888] pointer-events-none"></div>
+                </div>
+              {/each}
+            </div>
+
+            <div class="w-10/12 h-[1px] bg-[#1f1f1f] mx-auto my-1"></div>
+
+            <!-- Edit Mode Specific Tools -->
+            <div class="flex flex-col">
+              {#each [
+                { name: 'Extrude Region', icon: 'fa-layer-group', color: '#66cc99' },
+                { name: 'Inset Faces', icon: 'fa-square-minus', color: '#66cc99' },
+                { name: 'Bevel', icon: 'fa-cube', color: '#66cc99' },
+                { name: 'Loop Cut', icon: 'fa-cube', color: '#66cc99' },
+                { name: 'Knife', icon: 'fa-pen-nib', color: '#66cc99' },
+                { name: 'Poly Build', icon: 'fa-cubes', color: '#66cc99' },
+                { name: 'Spin', icon: 'fa-chart-pie', color: '#66cc99' },
+                { name: 'Smooth', icon: 'fa-circle-notch', color: '#cc99cc' },
+                { name: 'Edge Slide', icon: 'fa-arrows-up-down-left-right', color: '#cc99cc' },
+                { name: 'Shrink/Flatten', icon: 'fa-compress', color: '#cc99cc' },
+                { name: 'Shear', icon: 'fa-cube', color: '#cc99cc' },
+                { name: 'Rip Region', icon: 'fa-scissors', color: '#cc99cc' }
+              ] as tool}
+                <div class="w-full h-[36px] text-[#ccc] hover:bg-[#333] hover:text-white flex items-center cursor-pointer relative" alt-id="{tool.name} tool">
+                  <div class="w-[50px] h-[36px] flex items-center justify-center shrink-0">
+                    <i class="fa-solid {tool.icon} text-[16px]" style="color: {tool.color}; opacity: 0.8;"></i>
+                  </div>
+                  {#if isLeftToolbarExpanded}
+                    <span class="text-[12px] whitespace-nowrap ml-2 pointer-events-none">{tool.name}</span>
+                  {/if}
+                  {#if tool.name !== 'Smooth' && tool.name !== 'Poly Build'}
+                    <div class="absolute bottom-[2px] right-[2px] w-0 h-0 border-l-[4px] border-l-transparent border-b-[4px] border-b-[#888] pointer-events-none"></div>
+                  {/if}
+                </div>
+              {/each}
+            </div>
+            
+          </div>
         {:else}
           <!-- Old Toolbar Group 1 -->
       <div class="flex flex-col bg-[#282828] bg-opacity-95 rounded-[4px] shadow-md border border-[#1f1f1f] w-full overflow-hidden">
@@ -2380,6 +2659,166 @@
       </div>
     </div>
     
+
+
+
+    <!-- Asset Shelf (Bottom Bar for Texture Paint Mode) -->
+    {#if interactionMode === 'texture_paint'}
+      <div class="absolute bottom-0 left-[36px] right-0 bg-[#1d1d1d] border-t border-[#333] flex flex-col z-20" style="margin-right: 0px;" alt-id="Texture Paint Mode Asset Shelf">
+        <!-- Header -->
+        <div class="flex items-center justify-between h-[28px] px-2 border-b border-[#333]">
+          <!-- Left Header Tabs -->
+          <div class="flex items-center h-full gap-[1px]">
+            <div class="h-full flex items-center justify-center px-2 cursor-pointer hover:bg-[#333] text-[#aaa] hover:text-[#ccc]" alt-id="Asset Shelf Menu Toggle">
+              <i class="fa-solid fa-bars text-[12px] pointer-events-none"></i>
+            </div>
+            <div class="h-full flex items-center justify-center px-3 cursor-pointer bg-[#333] text-[#ccc]" alt-id="Asset Shelf Tab: All">
+              <span class="text-[12px] pointer-events-none">All</span>
+            </div>
+            <div class="h-full flex items-center justify-center px-3 cursor-pointer hover:bg-[#333] text-[#aaa] hover:text-[#ccc]" alt-id="Asset Shelf Tab: Basic">
+              <span class="text-[12px] pointer-events-none">Basic</span>
+            </div>
+            <div class="h-full flex items-center justify-center px-3 cursor-pointer hover:bg-[#333] text-[#aaa] hover:text-[#ccc]" alt-id="Asset Shelf Tab: Erase">
+              <span class="text-[12px] pointer-events-none">Erase</span>
+            </div>
+            <div class="h-full flex items-center justify-center px-3 cursor-pointer hover:bg-[#333] text-[#aaa] hover:text-[#ccc]" alt-id="Asset Shelf Tab: Pixel Art">
+              <span class="text-[12px] pointer-events-none">Pixel Art</span>
+            </div>
+            <div class="h-full flex items-center justify-center px-3 cursor-pointer hover:bg-[#333] text-[#aaa] hover:text-[#ccc]" alt-id="Asset Shelf Tab: Utilities">
+              <span class="text-[12px] pointer-events-none">Utilities</span>
+            </div>
+          </div>
+        </div>
+        <!-- Brush Items Row -->
+        <div class="flex items-center overflow-x-auto h-[48px] bg-[#222]">
+          {#each [
+            { name: 'Airbrush', icon: 'fa-spray-can', active: false },
+            { name: 'Blur', icon: 'fa-droplet', active: false },
+            { name: 'Paint Hard', icon: 'fa-paintbrush', active: true },
+            { name: 'Paint Hard Pressure', icon: 'fa-pen-nib', active: false },
+            { name: 'Paint Soft', icon: 'fa-paint-roller', active: false },
+            { name: 'Paint Soft Pressure', icon: 'fa-marker', active: false },
+            { name: 'Smear', icon: 'fa-hand-pointer', active: false },
+            { name: 'Erase Hard', icon: 'fa-eraser', active: false, color: '#f34555' },
+            { name: 'Erase Hard Pressure', icon: 'fa-eraser', active: false, color: '#f34555' },
+            { name: 'Erase Soft', icon: 'fa-eraser', active: false, color: '#f34555' },
+            { name: 'Erase Pixel Art', icon: 'fa-eraser', active: false, color: '#f34555' },
+            { name: 'Paint Pixel Art', icon: 'fa-chess-board', active: false },
+            { name: 'Clone', icon: 'fa-stamp', active: false },
+            { name: 'Fill', icon: 'fa-fill-drip', active: false },
+            { name: 'Mask', icon: 'fa-clone', active: false }
+          ] as brush}
+            <div class="h-full flex-shrink-0 w-[48px] flex flex-col items-center justify-center cursor-pointer border-r border-[#333] hover:bg-[#333] {brush.active ? 'bg-[#4772b3] shadow-[inset_0_0_0_1px_#8fb8ff]' : ''}" alt-id="Texture Paint Brush: {brush.name}">
+              <div class="w-[32px] h-[32px] rounded-full flex items-center justify-center pointer-events-none shadow-[inset_-2px_-2px_6px_rgba(0,0,0,0.8),inset_2px_2px_4px_rgba(255,255,255,0.2)] border border-[#111]" style="background: radial-gradient(circle at 35% 35%, #777 0%, #333 70%, #111 100%);">
+                <i class="fa-solid {brush.icon} text-[16px] {brush.active ? 'text-white drop-shadow-md' : 'text-[#eee] drop-shadow-md'} pointer-events-none" style="{brush.color ? `color: ${brush.color};` : ''}"></i>
+              </div>
+            </div>
+          {/each}
+        </div>
+      </div>
+    {/if}
+
+    <!-- Asset Shelf (Bottom Bar for Vertex Paint Mode) -->
+    {#if interactionMode === 'vertex_paint'}
+      <div class="absolute bottom-0 left-[36px] right-0 bg-[#1d1d1d] border-t border-[#333] flex flex-col z-20" style="margin-right: 0px;" alt-id="Vertex Paint Mode Asset Shelf">
+        <!-- Header -->
+        <div class="flex items-center justify-between h-[28px] px-2 border-b border-[#333]">
+          <!-- Left Header Tabs -->
+          <div class="flex items-center h-full gap-[1px]">
+            <div class="h-full flex items-center justify-center px-2 cursor-pointer hover:bg-[#333] text-[#aaa] hover:text-[#ccc]" alt-id="Asset Shelf Menu Toggle">
+              <i class="fa-solid fa-bars text-[12px] pointer-events-none"></i>
+            </div>
+            <div class="h-full flex items-center justify-center px-3 cursor-pointer bg-[#333] text-[#ccc]" alt-id="Asset Shelf Tab: All">
+              <span class="text-[12px] pointer-events-none">All</span>
+            </div>
+          </div>
+        </div>
+        <!-- Brush Items Row -->
+        <div class="flex items-center overflow-x-auto h-[48px] bg-[#222]">
+          {#each [
+            { name: 'Airbrush', icon: 'fa-spray-can', active: false },
+            { name: 'Average', icon: 'fa-circle-half-stroke', active: false },
+            { name: 'Blur', icon: 'fa-droplet', active: false },
+            { name: 'Paint Hard', icon: 'fa-paintbrush', active: true },
+            { name: 'Paint Hard Pressure', icon: 'fa-pen-nib', active: false },
+            { name: 'Paint Soft', icon: 'fa-paint-roller', active: false },
+            { name: 'Paint Soft Pressure', icon: 'fa-marker', active: false },
+            { name: 'Smear', icon: 'fa-hand-pointer', active: false }
+          ] as brush}
+            <div class="h-full flex-shrink-0 w-[48px] flex flex-col items-center justify-center cursor-pointer border-r border-[#333] hover:bg-[#333] {brush.active ? 'bg-[#4772b3] shadow-[inset_0_0_0_1px_#8fb8ff]' : ''}" alt-id="Vertex Paint Brush: {brush.name}">
+              <div class="w-[32px] h-[32px] rounded-full flex items-center justify-center pointer-events-none shadow-[inset_-2px_-2px_6px_rgba(0,0,0,0.8),inset_2px_2px_4px_rgba(255,255,255,0.2)] border border-[#111]" style="background: radial-gradient(circle at 35% 35%, #777 0%, #333 70%, #111 100%);">
+                <i class="fa-solid {brush.icon} text-[16px] {brush.active ? 'text-white drop-shadow-md' : 'text-[#eee] drop-shadow-md'} pointer-events-none"></i>
+              </div>
+            </div>
+          {/each}
+        </div>
+      </div>
+    {/if}
+
+    <!-- Asset Shelf (Bottom Bar for Sculpt Mode) -->
+    {#if interactionMode === 'sculpt'}
+      <div class="absolute bottom-0 left-[36px] right-0 bg-[#1d1d1d] border-t border-[#333] flex flex-col z-20" style="margin-right: 0px;" alt-id="Sculpt Mode Asset Shelf">
+        <!-- Header -->
+        <div class="flex items-center justify-between h-[28px] px-2 border-b border-[#333]">
+          <!-- Left Header Tabs -->
+          <div class="flex items-center h-full gap-[1px]">
+            <div class="h-full flex items-center justify-center px-2 cursor-pointer hover:bg-[#333] text-[#aaa] hover:text-[#ccc]" alt-id="Asset Shelf Menu Toggle">
+              <i class="fa-solid fa-bars text-[12px] pointer-events-none"></i>
+            </div>
+            <div class="h-full flex items-center justify-center px-3 cursor-pointer bg-[#333] text-[#ccc]" alt-id="Asset Shelf Tab: All">
+              <span class="text-[12px] pointer-events-none">All</span>
+            </div>
+            <div class="h-full flex items-center justify-center px-3 cursor-pointer hover:bg-[#333] text-[#aaa] hover:text-[#ccc]" alt-id="Asset Shelf Tab: General">
+              <span class="text-[12px] pointer-events-none">General</span>
+            </div>
+            <div class="h-full flex items-center justify-center px-3 cursor-pointer hover:bg-[#333] text-[#aaa] hover:text-[#ccc]" alt-id="Asset Shelf Tab: Paint">
+              <span class="text-[12px] pointer-events-none">Paint</span>
+            </div>
+            <div class="h-full flex items-center justify-center px-3 cursor-pointer hover:bg-[#333] text-[#aaa] hover:text-[#ccc]" alt-id="Asset Shelf Tab: Simulation">
+              <span class="text-[12px] pointer-events-none">Simulation</span>
+            </div>
+          </div>
+          <!-- Right Header Controls -->
+          <div class="flex items-center h-full gap-2 py-1">
+            <div class="flex items-center bg-[#282828] border border-[#111] rounded-[3px] shadow-[inset_0_1px_2px_rgba(0,0,0,0.2)] px-1.5 py-0.5 cursor-pointer hover:bg-[#333]" alt-id="Display type dropdown">
+              <i class="fa-solid fa-grip text-[12px] text-[#ccc] pointer-events-none"></i>
+              <i class="fa-solid fa-chevron-down text-[9px] text-[#aaa] ml-1 pointer-events-none"></i>
+            </div>
+            <div class="flex items-center bg-[#282828] border border-[#111] rounded-[3px] shadow-[inset_0_1px_2px_rgba(0,0,0,0.2)] px-2 py-0.5 w-[140px]" alt-id="Search assets input container">
+              <i class="fa-solid fa-magnifying-glass text-[12px] text-[#888] pointer-events-none"></i>
+              <input type="text" class="bg-transparent border-none outline-none text-[#ccc] text-[12px] ml-2 w-full placeholder-[#888]" placeholder="Search" alt-id="Search assets input field">
+            </div>
+          </div>
+        </div>
+        <!-- Brush Items Row -->
+        <div class="flex items-center overflow-x-auto h-[48px] bg-[#222]">
+          {#each [
+            { name: 'Blob', icon: 'fa-droplet', active: true },
+            { name: 'Clay', icon: 'fa-cube', active: false },
+            { name: 'Clay Strips', icon: 'fa-bars-staggered', active: false },
+            { name: 'Clay Thumb', icon: 'fa-hand-pointer', active: false },
+            { name: 'Crease Polish', icon: 'fa-wand-magic-sparkles', active: false },
+            { name: 'Crease Sharp', icon: 'fa-bolt', active: false },
+            { name: 'Draw', icon: 'fa-pen', active: false },
+            { name: 'Draw Sharp', icon: 'fa-pen-nib', active: false },
+            { name: 'Inflate/Deflate', icon: 'fa-arrows-to-circle', active: false },
+            { name: 'Layer', icon: 'fa-layer-group', active: false },
+            { name: 'Fill/Deepen', icon: 'fa-fill-drip', active: false },
+            { name: 'Flatten/Contrast', icon: 'fa-compress', active: false },
+            { name: 'Plateau', icon: 'fa-chart-area', active: false },
+            { name: 'Scrape Multiplane', icon: 'fa-layer-group', active: false },
+            { name: 'Scrape/Fill', icon: 'fa-broom', active: false }
+          ] as brush, i}
+            <div class="h-full flex-shrink-0 w-[48px] flex flex-col items-center justify-center cursor-pointer border-r border-[#333] hover:bg-[#333] {brush.active ? 'bg-[#4772b3] shadow-[inset_0_0_0_1px_#8fb8ff]' : ''}" alt-id="Sculpt Brush: {brush.name}">
+              <div class="w-[32px] h-[32px] rounded-full flex items-center justify-center pointer-events-none shadow-[inset_-2px_-2px_6px_rgba(0,0,0,0.8),inset_2px_2px_4px_rgba(255,255,255,0.2)] border border-[#111]" style="background: radial-gradient(circle at 35% 35%, #777 0%, #333 70%, #111 100%);">
+                <i class="fa-solid {brush.icon} text-[16px] {brush.active ? 'text-white drop-shadow-md' : 'text-[#eee] drop-shadow-md'} pointer-events-none"></i>
+              </div>
+            </div>
+          {/each}
+        </div>
+      </div>
+    {/if}
+
     {#if isObjectContextMenuOpen}
       <div class="fixed inset-0 z-40 bg-transparent" on:click|stopPropagation={() => { 
         isObjectContextMenuOpen = false; 
